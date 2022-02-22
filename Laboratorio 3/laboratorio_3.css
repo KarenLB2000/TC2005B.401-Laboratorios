@@ -1,0 +1,116 @@
+/*Laboratorio 3.*/
+
+body {
+    margin: 0 auto;
+    max-width: 50em;
+  }
+
+body {
+   font-family: "Helvetica", "Arial", sans-serif;
+ }
+
+body {
+   line-height: 1.5;
+   padding: 4em 1em;
+ }
+ 
+ h3 {
+   margin-top: 1em;
+   padding-top: 1em;
+ }
+
+body {
+   color: #555;
+ }
+
+h1,
+h3,
+strong {
+  color: #333;
+ }
+
+code,
+pre {
+  background: #eee;
+ }
+
+code {
+  padding: 2px 4px;
+  vertical-align: text-bottom;
+ }
+
+pre {
+  padding: 1em;
+ }
+
+a {
+   color: #e81c4f;
+ }
+
+body {
+   color: #566b78;
+ }
+  
+code,
+pre {
+  background: #f5f7f9;
+  border-bottom: 1px solid #d8dee9;
+  color: #a7adba;
+ }
+  
+pre {
+  border-left: 2px solid #69c;
+ }
+
+@import 'https://fonts.googleapis.com/css?family=Roboto:300,400,500';
+
+body {
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+ }
+
+header {
+   background-color: #263d36;
+   background-image: url("https://www.xtrafondos.com/descargar.php?id=5846&resolucion=2560x1440");
+   background-position: center top;
+   background-repeat: no-repeat;
+   background-size: cover;
+   line-height: 1.2;
+   padding: 10vw 2em;
+   text-align: center;
+ }
+
+header img {
+   display: inline-block;
+   vertical-align: top;
+ }
+
+body {
+   background-image: url("5942004.jpg");
+   background-repeat: no-repeat, repeat;
+   background-size: cover;
+   background-color: #cccccc;
+ }
+
+
+
+/* Instrucciones. 
+Aplicar los 3 niveles de estilos (en línea, documento y externo)
+Aplicar los diferentes tipos de selectores (genéricos, de clase, id, universales y pseudo clases)
+Explorar las propiedades de fuentes, listas y texto
+Comprender el modelo de caja (The Box Model)
+Aprender a separar la presentación del contenido en documentos HTML
+
+Revisa la presentación CSS.
+Crea un CSS externo y agrégalo al documento(s) que elaboraste en el laboratorio de html para agregarle una buena presentación a tu sitio.
+El CSS debe contener al menos un estilo definido con cada uno de los selectores y el estilo debe ser aplicado al documento. Puedes utilizar 
+como guía o o ayudarte de algunos de los sitios web que se enlistan en la sección de Recursos, o en algún otro sitio.
+Asegúrate que tus documentos HTML no tengan estilos en línea.
+Para un mejor rendimiento de tu sitio, crea una versión minimizada de tu CSS y enlázala a tu sitio en lugar del CSS que acabas de crear. 
+Puedes apoyarte de herramientas como http://cssminifier.com/
+Agrega las preguntas con sus respectivas respuestas en el documento HTML
+
+Como ingeniero de software ¿cuál es tu recomendación sobre el uso de !important en un CSS? 
+Si se pone una imagen de fondo en una página HTML, ¿por qué debe escogerse con cuidado?
+Como ingeniero de software, ¿cuál es tu recomendación al elegir las unidades de un propiedad de estilo entre %, px y pt?
+¿Por qué el uso de una versión minimizada del CSS mejora el rendimiento del sitio?
+*/
