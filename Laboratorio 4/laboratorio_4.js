@@ -1,7 +1,7 @@
 // Laboratorio 4 - Ana Karen López Baltazar (A01707750)
 
 // Ejercicio 1 - Tabla de cuadrados y cubos.
-const numero = prompt("Ingresa un número. ");
+const numero1 = prompt("Ingresa un número. ");
 
 function ejer_1(n) {
     let tabla = "<table>";
@@ -15,7 +15,7 @@ function ejer_1(n) {
     return tabla;
 }
 
-document.getElementById("ejercicio_1").innerHTML = ejer_1(numero);
+document.getElementById("ejercicio_1").innerHTML = ejer_1(numero1);
 
 // Ejercicio 2 - Suma de números aleatorios.
 var a1 = Math.floor(Math.random() * 10);
@@ -32,7 +32,7 @@ function ejer_2(ans) {
     if (resultado == ans) {
         return "<p>Tu resultado es correcto.<br> Tiempo de respuesta: " + tiempo + " ms";
      } else {
-        return "<p>Tu es resultado es incorrecto.<br> Tiempo de respuesta: " + tiempo + " ms";
+        return "<p>Tu resultado es incorrecto.<br> Tiempo de respuesta: " + tiempo + " ms";
      }
 }
 
@@ -63,7 +63,7 @@ function ejer_3(arr) {
             negativo++;
         }
         
-        // Impresión de arreglo.
+        // Impresión (string) de arreglo.
         if (j != (arr.length - 1)) {
             imprimir += arr[j] + ", ";
         }
@@ -75,18 +75,48 @@ function ejer_3(arr) {
     let contador = imprimir + "]" + "<br>";
     contador += "N. positivos: " + positivo + "<br>";
     contador += "N. negativos: " + negativo + "<br>";
-    contador += "N. ceros: " + cero;
+    contador += "Ceros: " + cero;
     return contador;
 }
 
 document.getElementById("ejercicio_3").innerHTML = ejer_3(arreglo);
 
 // Ejercicio 4 - Promedios.
-function ejer_4() {
+/*const matriz = [];
+const renglon = [];
+
+for (let i = 0; i < 5; i++) {
+    for (let j = 0; j < 5; j++) {
+        renglon[j] = Math.floor(Math.random()*10);
+    }
+    matriz.push(renglon[i]);
+}
+
+function ejer_4(matrix) {
+    const promedios = [];
+    for (let i = 0; i < matrix.length; i++) {
+        let suma = 0;
+        let promedio = 0;
+
+        for (let j = 0; j < matrix[i].length; j++) {
+            suma += matrix[i][j];
+        }
+        promedio = suma / matrix[i].length;
+        promedios[i].push(promedio);
+    }
+    return matrix.toString() + "<br>" + "Promedios: " + promedios.toString();    
+}
+
+document.getElementById("ejercicio_4").innerHTML = ejer_4(matriz);*/
+
+// Ejercicio 5 - Inverso.
+let num = Math.floor(Math.random() * 10);
+
+function ejer_5(num) {
 
 }
 
-document.getElementById("ejercicio_4").innerHTML = ejer_4();
+document.getElementById("ejercicio_5").innerHTML = ejer_5(numero2);
 
 /*  
 4:
