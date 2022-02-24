@@ -1,9 +1,9 @@
 /*Laboratorio 3.*/
 
-body {
+/*body {
     margin: 0 auto;
     max-width: 50em;
-  }
+  }*/
 
 body {
    font-family: "Helvetica", "Arial", sans-serif;
@@ -68,9 +68,19 @@ body {
   font-family: "Roboto", "Helvetica", "Arial", sans-serif;
  }
 
-header {
+.bg-banner{
+  background: url(https://ak.picdn.net/shutterstock/videos/27146221/thumb/1.jpg) #FFFFFF;
+  background-size: cover;
+  background-position: center;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/*header {
    background-color: #263d36;
-   background-image: url("https://www.xtrafondos.com/descargar.php?id=5846&resolucion=2560x1440");
+   background-image: url("img_escaleras.jpg");
    background-position: center top;
    background-repeat: no-repeat;
    background-size: cover;
@@ -85,11 +95,11 @@ header img {
  }
 
 body {
-   background-image: url("5942004.jpg");
+   background-image: url("img_paisaje.jpg");
    background-repeat: no-repeat, repeat;
    background-size: cover;
    background-color: #cccccc;
- }
+ }*/
 
 
 
