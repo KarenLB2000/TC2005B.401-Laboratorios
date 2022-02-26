@@ -9,6 +9,7 @@ for (let i = 0; i < 10; i++) {
 }*/
 
 // Pedir desde consola el arreglo.
+let tamanio = prompt('Tamaño del arreglo: ')
 function promedios(arreglo) {
     for (let elemento of arreglo) {
     suma += elemento;

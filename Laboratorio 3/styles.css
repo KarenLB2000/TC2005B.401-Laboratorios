@@ -1,0 +1,30 @@
+body {
+  background-image: url('img_city.jpg');
+}
+
+header {
+  padding: 1px;
+  letter-spacing: 0.1em;
+  text-align: left;
+  display: block;
+}
+
+h1 {
+  font-family: fallback;
+  font-size: 30px;
+  font-style: italic;
+  font-size: x-large;
+}
+
+footer {
+  text-align: right;
+  font-size: small;
+  font-style: italic;
+}
+
+#footer {
+  position: absolute;
+  bottom: 0;
+  width: 99%;
+  height: 5rem;
+}
