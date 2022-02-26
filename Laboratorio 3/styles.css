@@ -1,56 +1,75 @@
 body {
-  padding: 1em 2em;
-  background-image: url('img_city.jpg');
-  margin: 0 auto;
-  max-width: 80em;
   font-family: serif;
   text-align: justify;
+  margin: 0 auto;
+}
+
+article {
+  padding: 1em 5em 2em 5em;
 }
 
 header {
-  letter-spacing: 0.1em;
+  background-color: #37474f;
+  color: white;
   text-align: left;
   display: block;
-  margin: 0 auto;
+  padding: 0.2em 2em 0.2em 2em;
 }
 
 h1 {
-  font-style: italic;
-  font-size: xx-large;
+  font-size: x-large;
 }
 
-section h3 {
-  color: #606060;
-}
-
-.right-text{
-  vertical-align:middle;
-  float:right;
-}
-
-.left-picture {
-  float: left;
-  margin: 0 20px 20px 0;
-  max-width: 300px;
-  object-fit: contain;
-  align-self: flex-start;
+h3 {
+  color: #607D8B;
 }
 
 a {
   text-decoration:none; 
   color:black;
-  font-style:;
 }
 
 a:hover {
+  color: #607D8B;
+}
+
+ul {
+  list-style-type: square;
+}
+
+.left-picture {
+  float: left;
+  margin: 1em 1.5em 1.5em 0;
+  object-fit: contain;
+  align-self: flex-start;
+}
+
+.question {
+  font-weight: bold;
   color: #606060;
 }
 
+.references {
+  text-align: left;
+  text-indent: 2em;
+}
+
+.references a {
+  text-decoration:underline;
+  color: #607D8B; 
+}
+
+footer a {
+  text-decoration:none; 
+  color:white;
+}
+
 #footer {
+  background-color: #37474f;
+  color: white;
   text-align: right;
   font-size: small;
   font-style: italic;
-  position: absolute;
-  bottom: 0;
-  height: 5rem;
+  padding: 1em 2em 1em 2em;
 }
+

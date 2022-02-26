@@ -10,10 +10,10 @@
                 <h1>Laboratorio 3: CSS</h1>
             </header>
 
-            <section>
+            <article>
                 <a href="https://www.youtube.com/watch?v=eBRRWnnQ0NY"><img class="left-picture" src="img_persona.jpg" alt="Karen_Baltazar" width="250"></a>
                 <h3>« Sobre Mí »</h3>
-                <p classs="right-text">
+                <p>
                     ¿Quién soy yo y quién eres tú? A pesar de no saber cómo contestar a la primera parte de esta pregunta, sinceramente espero
                     que para el resto de ella tengas una respuesta. Ahora bien, aunque como he dicho no sé cómo responder a ésta, haré mi mejor esfuerzo
                     por contarte acerca de mí. <i>Yo</i> sólo soy otro humano como cualquiera; contemplando la vida, disfrutando algunas partes
@@ -25,16 +25,65 @@
                     y de <a href="https://genshin.hoyoverse.com/es/home"><strong>aventurarme en los mundos fantásticos de cada videojuego</strong></a>
                     que llega a mis manos.
                 </p>
-            </section>
 
-            <section>
                 <h3>Preguntas a responder</h3>
-            </section>
+                <p class="question">Como ingeniero de software ¿cuál es tu recomendación sobre el uso de !important en un CSS?</p>
+                <p>
+                    Recordando que cuando se emplea <code>!important</code> en una declaración de estilo ésta sobrescribe a cualquier otra regla de estilo
+                    (MDN Web Docs, 2022), la recomendación sobre su uso es que debe usarse casos determinados
+                    en los que se tiene que sobrescribir un estilo donde no hay ninguna otra manera para hacerlo.
+                    Así pues, antes de usar <code>!important</code> se debe considerar el uso de propiedades de CSS u otras reglas específicas.
+                </p>
+
+                <p class="question">Si se pone una imagen de fondo en una página HTML, ¿por qué debe escogerse con cuidado?</p>
+                <p>
+                    Al poner una imagen como fondo en una página, ésta se debe escoger con cuidado en tanto a que agregue al diseño de la página
+                    aspectos importantes; pues, es relevante para un buen diseño tener en mente la calidad de la imagen y su adaptación (armonía)
+                    con los demás elementos de la página, en tanto a que permita la presentación clara de la información y un visual agradable para
+                    sus usuarios.
+                </p>
+
+                <p class="question">Como ingeniero de software, ¿cuál es tu recomendación al elegir las unidades de un propiedad de estilo entre %, px y pt?</p>
+                <p>
+                    En CSS, las medidas se emplean, ente otras cosas, para definir la altura, anchura y márgenes de los elementos y para establecer el tamaño 
+                    de letra del texto. Así pues, en este contexto, CSS divide las unidades de medida en dos grupos: absolutas y relativa.  
+                    De forma que es importante conocer la diferencia para entender qué dimensiones van a tener las cosas en nuestra página web y siendo entonces
+                    mi recomendación la de familizaricarse con cada una de las unidades antes mencionadas y considerar para qué casos sería lo mejor su uso. Por lo
+                    demás, una breve descripción de éstas unidades es (uniwebsidad, 2022):                     
+                </p>
+                <ul>
+                    <li><strong>Punto (pt):</strong> Un punto equivale a 1 pulgada/72.</li>
+                    <li><strong>Píxeles (px):</strong> Un pixel trata de una unidad relativa respecto de la resolución de la pantalla del dispositivo en el que se visualiza la página HTML.</li>
+                    <li><strong>Porcetaje (%):</strong> El porcentaje también es una unidad de medida relativa que siempre se establece en relación con otro valor (elemento padre).</li>
+                </ul>
+
+                <p class="question">¿Por qué el uso de una versión minimizada del CSS mejora el rendimiento del sitio?</p>
+                <p>
+                    De acuerdo con Imperva (2019), la minificación se ha convertido en una práctica estándar para la optimización de páginas en la medida de que
+                    la versión minimizada de un archivo proporciona la misma funcionalidad al tiempo que reduce el ancho de banda de las solicitudes de red.
+                </p>
+
+                <h3>Referencias</h3>
+                <p class="references">
+                    Imperva. (2019). <i>Minification</i>. Recuperado de: 
+                    <a href="https://www.imperva.com/learn/performance/minification/">https://www.imperva.com/learn/performance/minification/</a><br>
+                </p>
+                
+                <p class="references">
+                    MDN Web Docs. (2022). Especificidad. Recuperado de: 
+                    <a href="https://developer.mozilla.org/es/docs/Web/CSS/Specificity">https://developer.mozilla.org/es/docs/Web/CSS/Specificity</a><br>
+                </p> 
+
+                <p class="references">
+                    uniwebsidad. (2022). 3.1. Unidades de medida. Recuperado de: 
+                    <a href="https://uniwebsidad.com/libros/css/capitulo-3/unidades-de-medida">https://uniwebsidad.com/libros/css/capitulo-3/unidades-de-medida</a><br>
+                </p>                
+            </article>
 
             <footer id="footer">
                 <p><strong>Ana Karen López Baltazar</strong><br> A01707750 • A01707750@tec.mx<br> Web creada con 
                     <a href="https://code.visualstudio.com/"><strong>Visual Studio Code</strong></a>
                 </p>
-            </footer>            
+            </footer>                          
         </body>
 </html>
