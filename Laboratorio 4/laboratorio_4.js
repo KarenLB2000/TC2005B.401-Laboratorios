@@ -1,5 +1,3 @@
-// Laboratorio 4 - Ana Karen López Baltazar (A01707750)
-
 // Ejercicio 1 - Tabla de cuadrados y cubos.
 const numero1 = prompt("Ingresa un número. ");
 
@@ -110,27 +108,13 @@ function ejer_4(matrix) {
 document.getElementById("ejercicio_4").innerHTML = ejer_4(matriz);*/
 
 // Ejercicio 5 - Inverso.
-let num = Math.floor(Math.random() * 10);
+let numero2 = Math.floor(Math.random() * 1001)+1000;
 
 function ejer_5(num) {
-
+    let inverso = num.toString().split('').reverse().join('');
+    let regreso = "Original: " + num + "<br>";
+    regreso += "Inverso: " + inverso;
+    return regreso;
 }
 
 document.getElementById("ejercicio_5").innerHTML = ejer_5(numero2);
-
-/*  
-4:
-Función: promedios. Parámetros: Un arreglo de arreglos de números. 
-Regresa: Un arreglo con los promedios de cada uno de los renglones de la matriz.
-
-5:
-Función: inverso. Parámetros: Un número. Regresa: El número con sus dígitos en orden inverso.
-
-6:
-Crea una solución para un problema de tu elección (puede ser algo relacionado con tus intereses, 
-alguna problemática que hayas identificado en algún ámbito, un problema de programación que 
-hayas resuelto en otro lenguaje, un problema de la ACM, entre otros). El problema debe estar descrito 
-en un documento HTML, y la solución implementada en JavaScript, utilizando al menos la creación de 
-un objeto, el objeto además de su constructor deben tener al menos 2 métodos. Muestra los resultados
-en el documento HTML.
-*/
