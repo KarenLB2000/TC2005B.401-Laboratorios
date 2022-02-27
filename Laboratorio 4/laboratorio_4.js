@@ -3,6 +3,7 @@ const numero1 = prompt("Ingresa un número. ");
 
 function ejer_1(n) {
     let tabla = "<table>";
+    tabla +="<tr><th>Número</th>" + "<td>Cuadrado</td>" + "<td>Cubo</td></tr>";
     
     for (let i = 1; i <= n; i++) {
         tabla += "<tr>";
@@ -118,3 +119,5 @@ function ejer_5(num) {
 }
 
 document.getElementById("ejercicio_5").innerHTML = ejer_5(numero2);
+
+// Ejercicio 6 - Problema de mi elección.

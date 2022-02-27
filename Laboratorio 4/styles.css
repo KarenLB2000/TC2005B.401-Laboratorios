@@ -1,0 +1,55 @@
+body {
+  font-family: serif;
+  text-align: justify;
+  margin: 0 auto;
+}
+
+header {
+  background-color: #37474f;
+  color: white;
+  text-align: left;
+  display: block;
+  padding: 0.2em 2em 0.2em 2em;
+}
+
+article {
+  padding: 1em 5em 2em 5em;
+}
+
+h1 {
+  font-size: x-large;
+}
+
+h3 {
+  color: #607D8B;
+}
+
+a {
+  text-decoration:underline;
+  color: #607D8B; 
+}
+
+.pregunta {
+  font-weight: bold;
+  color: #606060;
+}
+
+.referencias {
+  text-align: left;
+  text-indent: 2em;
+}
+
+footer a {
+  text-decoration:none; 
+  color:white;
+}
+
+#footer {
+  background-color: #37474f;
+  color: white;
+  text-align: right;
+  font-size: small;
+  font-style: italic;
+  padding: 1em 2em 1em 2em;
+}
+
