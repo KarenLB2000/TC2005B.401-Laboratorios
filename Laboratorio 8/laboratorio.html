@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+        <head>
+            <title>Laboratorio 1</title>
+            <meta charset="UTF-8">
+        </head>
+        <body>
+            <header>
+                <p style="text-align:right;"><img src="https://javier.rodriguez.org.mx/itesm/2014/tecnologico-de-monterrey-blue.png" alt="Tecnológico de Monterrey logo" height="50"></p>
+            </header>
+
+            <h1>Laboratorio 1: Introducción a las aplicaciones web, HTML5 y ciclo de vida de los sistemas de información</h1>
+            <p> 
+                Ana Karen López Baltazar (A01707750)<br>
+                A01707750@tec.mx
+            </p>
+
+            <h3>«Sobre Mí»</h3>
+            <p>
+                ¿Quién soy yo y quién eres tú? A pesar de no saber cómo contestar a la primera parte de esta pregunta, sinceramente espero
+                que el resto de ella tengas tu respuesta. Ahora bien, aunque como he dicho no sé cómo responder a ésta, haré mi mejor esfuerzo
+                por contarte acerca de mí. <i>Yo</i> sólo soy otro humano como cualquiera; contemplando la vida, disfrutando algunas partes
+                de ella y odiando otras de sus partes. En etre aquello que disfruto de ella se encuentra precisamente el estar con vida; pues,
+                si no tuviera esa dicha, hoy no podría estar aquí, programando está página web que por cuestiones del destino tuve que hacer.
+                Obviamente, esto no es lo único que disfruto de la vida y por su puesto, como sucede con muchos más, me regocijo de probar comida 
+                deliciosa con buenos amigos, de experimentar de una lectura entretenida y de aventurarme en los mundos fantásticos de cada videojuego
+                que llega a mis manos.
+            </p>
+
+            <p> 
+                En tanto a aquello que odio de la vida, prefiero no decir nada más; ya que no quiero asustar a nadie. Pero, espero que realmente
+                no me juzges al optar por el silencio y no me fuerces a dar explicaciones. Igualmente, gracias por detenerte a leer esto y deleítate
+                de los eventos inesperados y escenarios que trae la tortuosa vida.
+            </p>
+
+            <h3>Preguntas a responder</h3>
+            <p>
+                <strong><i>¿Cuál es la diferencia entre Internet y la World Wide Web?</i></strong><br>
+                Internet es un sistema de red conectado globalmente que facilita la comunicación mundial y el acceso a recursos de datos a través 
+                de una enorme colección de redes personales, públicas, comerciales, académicas y gubernamentales; World Wide Web es un servicio 
+                de recuperación de información de la web (la red informática mundial)(GeeksforGeeks, 2020). Dada la definición de ambos conceptos, 
+                se entiende entonces que el Internet sirve como la infraestructura para la Web, siendo este útlimo un servicio sobre trabaja
+                o funciona sobre esa infraestructura.
+            </p>
+
+            <p>
+                <strong><i>¿Cuáles son las partes de un URL?</i></strong><br>
+                Las partes de una URL son (Aviani, 2019): protocolo HTTP, dominio, ruta y parámetros.
+            </p>
+
+            <p>
+                <strong><i>¿Cuál es el propósito de los métodos HTTP: GET, HEAD, POST, PUT, PATCH, DELETE?</i></strong><br>
+                De acuerdo con el árticulo de Aviani (2019), el propósito de cada método es el siguiente: GET tiene como propósito  la
+                solicitud de los datos de un recurso específico; HEAD, pide una respuesta idéntica a la de una petición GET, pero sin el cuerpo 
+                de la respuesta; POST se utiliza para enviar datos a un servidor para crear un recurso; PUT, sirve para actualizar el recurso 
+                existente en un servidor utilizando el contenido en el cuerpo de la solicitud; PATCH, es utilizado para aplicar modificaciones 
+                parciales a un recurso; y, finalmente, DELETE, borra un recurso en específico.
+            </p>
+
+            <p>
+                <strong><i>¿Qué método HTTP se debe utilizar al enviar un formulario HTML, por ejemplo cuando ingresas 
+                    tu usuario y contraseña en algún sitio? ¿Por qué?</i></strong><br>
+                El método que se debe utilizar es POST en virtud de que con éste enviamos los datos del login al servidor.
+            </p>
+
+            <p>
+                <strong><i>¿Qué método HTTP se utiliza cuando a través de un navegador web se accede a una página 
+                    a través de un URL?</i></strong><br>
+                El método que se utiliza es el GET, ya que a través de este método, realizamos peticiones al servidor; 
+                solicitando un recurso específico (a través de la URL) al servidor web.
+            </p>
+
+            <p>
+                <strong><i>Un servidor web devuelve una respuesta HTTP con código 200. ¿Qué significa esto? 
+                    ¿Ocurrió algún error?</i></strong><br>
+                Al leer la descripción porporcionada por MDN Web Docs (2022) sobre el códido de respuesta 200,
+                sabemos que no se trata de un error, puesto que este código hace referencia a que la solicitud
+                HTTP específica ha tenido éxito (se ha completado satisfactoriamente).
+            </p>
+
+            <p>
+                <strong><i>¿Es responsabilidad del desarrollador corregir un sitio web si un usuario reporta que 
+                    intentó acceder al sitio y se encontró con un error 404? ¿Por qué?</i></strong><br>
+                Depende del caso o situación puede ser responsabilidad del desarollador o bien del usuario. Esto se debe 
+                a que el código 404 indica que el servidor no puede encontrar el recurso solicitado (MDN Web Docs, 2022), lo 
+                que puede llegar a crear situaciones en donde el usuario trate de acceder algún recurso inexistente o dado un 
+                descuido del desarrollador, se de el caso de vínculos rotos en su misma página.
+            </p>
+
+            <p>
+                <strong><i>¿Es responsabilidad del desarrollador corregir un sitio web si un usuario reporta 
+                    que intentó acceder al sitio y se encontró con un error 500? ¿Por qué?</i></strong><br>
+                En este caso, es responsabilidad del desarrollador, pues, después de todo, dicho código indica que el servidor encontró 
+                una condición inesperada que le impide completar la petición (MDN Web Docs, 2022); a lo que el desarrollador debe responder
+                para que el software funcione perfectamente en éste (servidor).
+            </p>
+
+            <p>
+                <strong><i>¿Qué significa que un atributo HTML5 esté depreciado o desaprobado (deprecated)? 
+                    Menciona algunos elementos de HTML 4 que en HTML5 estén desaprobados.</i></strong><br>
+                De acuerdo con la definición que proporciona W3C (2018), un elemento o atributo depreciado es 
+                aquel que ha quedado obsoleto por construcciones más nuevas. De forma que, en este caso,
+                un atributo HTML5 depreciado hace referencia a un atributo cuyo uso ya no es recomendado para el
+                estándar del HTML5. Algunos ejemplos son: base, font, big, frame, applet, dir, etc.
+            </p>
+
+            <p>
+                <strong><i>¿Cuáles son las diferencias principales entre HTML 4 y HTML5?</i></strong><br>
+                Las principales diferencias entre ambas versiones sería que en HTML5 se de la introducción de nuevos 
+                elementos (em, strong, article, section, ...) y de una nueva sintaxis alternativa (<!DOCTYPE html>), entre otras cosas.
+            </p>
+
+            <p>
+                <strong><i>¿Qué componentes de estructura y estilo tiene una tabla?</i></strong><br>
+                En tanto a la estructura de tablas (table), mclibre.org (2019) menciona que una tabla en HTML es un conjunto de celdas (td o th) 
+                organizadas en filas (tr) que a su vez se organizan en grupos de filas (thead, tbody o tfoot); ésta puede tener 
+                una leyenda (caption) y hacer referencia a las columnas (col y colspan). Por el otro lado, en tanto al estilo de una tabla,
+                ésta puede ser estilizada por medio de un CSS.
+            </p>
+
+            <p>
+                <strong><i>¿Cuáles son los principales controles de una forma HTML5?</i></strong><br>
+                Entre los controles de formulario originales podemos encontrar a: form, fieldset, legend, textarea, label, button y input. 
+                A lo que cabe agregar que los elementos y atributos para formularios en HTML5 proveen un mayor grado de marcado semántico 
+                que en HTML4, según lo propone MDN Web Docs (2022) en su artículo de Formularios en HTML5.
+            </p>
+
+            <p>
+                <strong><i>¿Qué tanto soporte HTML5 tiene el navegador que utilizas?</i></strong><br>
+                El soporte que tiene mi navegador (Google Chrome) es de 476 de 555 puntos.
+            </p>
+
+            <p>
+                <strong><i>¿Cuál es el ciclo de vida de los sistemas de información?</i></strong><br>
+                En palabras de Sy Corvo (2020), el ciclo de vida de un sistema de información es un modelo estructurado 
+                de gestión de proyectos que describe las fases necesarias para construir un sistema de información, 
+                desde el inicio hasta el resultado final. 
+            </p>
+
+            <p>
+                <strong><i>¿Cuál es el ciclo de desarrollo de sistemas de información?</i></strong><br>
+                Siguiendo el hilo de ideas de la pregunta anterior, el Ciclo de Vida del Desarrollo de Sistemas (SDLC) 
+                es un método que facilita el desarrollo de los sistemas de información (Viewnext, 2018). Este método comprende
+                una serie de siete etapas o fases, las cuales son: 1) Planificaicón, 2) Análisis de requerimientos,
+                3) Diseño, 4) Desarrollo, 5) Prueba, 6) Integración y ejecución, 7) Operación y mantenimiento.
+
+            </p>
+            
+            <h3>Referencias</h3>
+            <ul style="list-style-type: square">
+                <li>Aviani, G. (2019). An introduction to HTTP: everything you need to know. Recuperado de:
+                    <a href="https://www.freecodecamp.org/news/http-and-everything-you-need-to-know-about-it/">https://www.freecodecamp.org/news/http-and-everything-you-need-to-know-about-it/</a></li>
+                
+                <li>GeeksforGeeks. (2020). Difference between Internet and WWW. Recuperado de: 
+                    <a href="https://www.geeksforgeeks.org/difference-between-internet-and-www/">https://www.geeksforgeeks.org/difference-between-internet-and-www/</a></li>    
+                
+                <li>mclibre.org. (2019). Tablas. Recuperado de: <a href="https://www.mclibre.org/consultar/htmlcss/html/html-tablas.html#:~:text=Estructura%20de%20una%20tabla%20()&text=Una%20tabla%20HTML%20(,%3E%20y%20).">
+                    https://www.mclibre.org/consultar/htmlcss/html/html-tablas.html#:~:text=Estructura%20de%20una%20tabla%20()&text=Una%20tabla%20HTML%20(,%3E%20y%20).</a></li>
+
+                <li>MDN Web Docs. (2022). Códigos de estado de respuesta HTTP Recuperado de: 
+                    <a href="https://developer.mozilla.org/es/docs/Web/HTTP/Status">https://developer.mozilla.org/es/docs/Web/HTTP/Status</a></li>
+                
+                <li>Sy Corvo. (2020). Ciclo de vida de un sistema de información (Fases). Lifeder. Recuperado de: <a href="https://www.lifeder.com/ciclo-vida-sistema-informacion/">
+                    https://www.lifeder.com/ciclo-vida-sistema-informacion/</a></li>
+
+                <li>Viewnext. (2018). El ciclo SDLC en 7 fases. Recuperado de: <a href="https://www.viewnext.com/el-ciclo-sdlc-en-7-fases/">https://www.viewnext.com/el-ciclo-sdlc-en-7-fases/</a></li>
+                
+                <li>W3C. (2018). HTML 4.01 Specification. Recuperado de: <a href="https://www.w3.org/TR/html401/">https://www.w3.org/TR/html401/</a></li>
+            </ul>
+
+            <footer> 
+                <a href="https://code.visualstudio.com/">Ir a Visual Studio Code</a>
+            </footer>
+        </body>
+</html>
