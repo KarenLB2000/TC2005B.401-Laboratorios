@@ -34,23 +34,43 @@
             <h3>Preguntas a responder</h3>
             <p class="pregunta">¿Qué diferencias y semejanzas hay entre Java y JavaScript?</p>
             <p>
-
+                Dado que nunce he programado en Java, tomaré como referencia al artículo de ISDI Coders (2017) respecto a este tema.
+                Así pues, se presenta en el artículo que algunas de las diferencias enter ambos lenguajes es:
             </p>
+            <ul>
+                <li>Java crea aplicaciones que tras ser compiladasse pueden ejecutar en navegadores a través de una máquina virtual, mientras que Javascript se ejecuta nativamente en los navegadores sin necesidad de ninguna máquina virtual.</li>
+                <li>Java es un lenguaje fuertemente tipado y Javascript es débilmente tipado.</li>
+                <li>Java es un lenguaje de programación orientado a objetos puramente, y Javascript es un lenguaje basado en prototipos.</li>                    
+            </ul>
+            <p>En tanto a las semejanzas, aunque algo obvio, éstos tienen nombres parecidos.</p>
+
 
             <p class="pregunta">¿Qué métodos tiene el objeto Date? (Menciona al menos 5*)</p>
-            <p>
-
-            </p>
+            <p>La clase <code>Date</code> permite trabajar con fechas y horas en JavaScript. Algunos de los métodos que de esta clase incluyen (MDN Web Docs, 2022):</p>
+            <ul>
+                <li><b>Date.now():</b> Devuelve el valor numérico correspondiente a la hora actual.</li>
+                <li><b>Date.parse():</b> Transforma una cadena que representa una fecha, y devuelve el número de milisegundos desde el 1 de enero de 1970, hora local 00:00:00.</li>
+                <li><b>Date.toUTCString():</b> Convierte una fecha en una cadena, utilizando la zona horaria UTC.</li>
+                <li><b>Date.setTime():</b> Establece el objeto Date en la hora representada por una cantidad de milisegundos desde el 1 de enero de 1970, 00:00:00 UTC.</li>
+                <li><b>Date.getTimezoneOffset():</b> Devuelve la diferencia, en minutos, entre una fecha evaluada en la zona horaria UTC y la misma fecha evaluada en la zona horaria local.</li>
+            </ul>
 
             <p class="pregunta">¿Qué métodos tienen los arreglos? (Menciona al menos 5*)</p>
-            <p>
-
-            </p>
+            <p>En tanto a los métodos del objeto <code>Array</code>, algunos de ellos son (MDN Web Docs, 2022):</p>
+            <ul>
+                <li><b>Array.find():</b> Devuelve el valor del primer elemento del arreglo que cumple la función de prueba proporcionada.</li>
+                <li><b>Array.sort():</b> Ordena los elementos de un arreglo localmente y devuelve el arreglo ordenado</li>
+                <li><b>Array.push():</b> Añade uno o más elementos al final de un arreglo y devuelve la nueva longitud del arreglo.</li>
+                <li><b>Array.reverse():</b> Invierte el orden de los elementos de un arreglo</li>
+                <li><b>Array.join():</b> Une todos los elementos de una matriz en una cadena y devuelve esta cadena.</li>
+            </ul>
 
             <p class="pregunta">¿Cómo se declara una variable con alcance local dentro de una función?</p>
             <p>
-
-            </p>
+                El alcance de la variable generalmente se define por el lugar de su declaración. Una variable declarada dentro de una función tiene alcance 
+                local y, por lo tanto, se denomina variable local. Las variables globales se definen fuera de las funciones y tienen acceso a todas las funciones 
+                y no solo a una.
+            </p><br>
 
             <p class="pregunta">¿Qué implicaciones tiene utilizar variables globales dentro de funciones?</p>
             <p>
@@ -61,6 +81,18 @@
             </p>
 
             <h3>Referencias</h3>
+            <p class="referencias">
+                ISDI Coders. (2017). <i>¿Es lo mismo Java que Javascript?</i> Recuperado de: <a href="https://isdicoders.com/es/blog/es-lo-mismo-java-que-javascript_19381">https://isdicoders.com/es/blog/es-lo-mismo-java-que-javascript_19381</a><br>
+            </p>
+
+            <p class="references">
+                MDN Web Docs. (2022). <i>Array</i>. Recuperado de: <a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Array">https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Array</a><br>
+            </p>
+
+            <p class="references">
+                MDN Web Docs. (2022). <i>Date</i>. Recuperado de: <a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Date">https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Date</a><br>
+            </p>
+
             <p class="referencias">
                 Stack Overflow. (2016). <i>¿Por qué es considerado una mala práctica utilizar variables globales?</i>. Recuperado de: <a href="https://es.stackoverflow.com/questions/29177/por-qu%C3%A9-es-considerado-una-mala-pr%C3%A1ctica-utilizar-variables-globales">https://es.stackoverflow.com/questions/29177/por-qu%C3%A9-es-considerado-una-mala-pr%C3%A1ctica-utilizar-variables-globales</a><br>
             </p>

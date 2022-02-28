@@ -81,7 +81,9 @@ function ejer_3(arr) {
 document.getElementById("ejercicio_3").innerHTML = ejer_3(arreglo);
 
 // Ejercicio 4 - Promedios.
-/*const matriz = [];
+// Función: promedios. Parámetros: Un arreglo de arreglos de números. 
+// Regresa: Un arreglo con los promedios de cada uno de los renglones de la matriz.
+const matriz = [];
 const renglon = [];
 
 for (let i = 0; i < 5; i++) {
@@ -91,7 +93,9 @@ for (let i = 0; i < 5; i++) {
     matriz.push(renglon[i]);
 }
 
-function ejer_4(matrix) {
+console.log(matriz);
+
+/*function ejer_4(matrix) {
     const promedios = [];
     for (let i = 0; i < matrix.length; i++) {
         let suma = 0;
@@ -121,3 +125,4 @@ function ejer_5(num) {
 document.getElementById("ejercicio_5").innerHTML = ejer_5(numero2);
 
 // Ejercicio 6 - Problema de mi elección.
+// En construcción.
