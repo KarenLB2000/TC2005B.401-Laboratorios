@@ -123,4 +123,48 @@ function ejer_5(num) {
 document.getElementById("ejercicio_5").innerHTML = ejer_5(numero2);
 
 // Ejercicio 6 - Problema de mi elección.
-// En construcción.
+// 'Error': Acceso de memoria.
+const room = [
+    [' ', ' ', ' '],
+    [' ', ' ', 'm'],
+    [' ', ' ', '*']
+]
+//console.table(room);
+
+const room2 = [
+  ['*', ' ', ' ', ' '],
+  [' ', 'm', '*', ' '],
+  [' ', ' ', ' ', ' '],
+  [' ', ' ', ' ', '*']
+]
+console.table(room2);
+
+function ejer_6(direction, game) {
+    // Posición del ratón
+    let x = 0; let y = 0;
+    for(let i=0; i<game.length; i++) {
+      for(let j=0; j<game[i].length; j++) {
+        if (game[i][j] == 'm'){
+          x = i; y = j;
+        }
+      }
+    }
+    
+    // Verificación de movimiento correcto
+    if((game[x-1][y] == '*')&&(direction == 'up')){
+      return 'M. correcto: Verdadero.';
+    } else
+    if ((game[x+1][y] == '*')&&(direction == 'down')){
+      return 'M. correcto: Verdadero.';
+    } else
+    if ((game[x][y-1] == '*')&&(direction == 'left')){
+      return 'M. correcto: Verdadero.';
+    } else
+    if ((game[x][y+1] == '*')&&(direction == 'right')){
+      return 'M. correcto: Verdadero.';
+    } else {
+      return 'M. correcto: Falso.';
+    }
+  }
+
+  document.getElementById("ejercicio_6").innerHTML = ejer_6('rigth', room2);
