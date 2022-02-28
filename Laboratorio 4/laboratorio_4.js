@@ -81,22 +81,20 @@ function ejer_3(arr) {
 document.getElementById("ejercicio_3").innerHTML = ejer_3(arreglo);
 
 // Ejercicio 4 - Promedios.
-// Función: promedios. Parámetros: Un arreglo de arreglos de números. 
-// Regresa: Un arreglo con los promedios de cada uno de los renglones de la matriz.
-const matriz = [];
-const renglon = [];
+var matriz = [];
 
 for (let i = 0; i < 5; i++) {
+    let renglon = [];
     for (let j = 0; j < 5; j++) {
         renglon[j] = Math.floor(Math.random()*10);
     }
-    matriz.push(renglon[i]);
+    matriz.push(renglon);
 }
 
-console.log(matriz);
+console.table(matriz);
 
-/*function ejer_4(matrix) {
-    const promedios = [];
+function ejer_4(matrix) {
+    let promedios = [];
     for (let i = 0; i < matrix.length; i++) {
         let suma = 0;
         let promedio = 0;
@@ -105,12 +103,12 @@ console.log(matriz);
             suma += matrix[i][j];
         }
         promedio = suma / matrix[i].length;
-        promedios[i].push(promedio);
+        promedios.push(promedio);
     }
-    return matrix.toString() + "<br>" + "Promedios: " + promedios.toString();    
+    return "Promedios de matriz en consola: [" + promedios.toString() + "]";    
 }
 
-document.getElementById("ejercicio_4").innerHTML = ejer_4(matriz);*/
+document.getElementById("ejercicio_4").innerHTML = ejer_4(matriz);
 
 // Ejercicio 5 - Inverso.
 let numero2 = Math.floor(Math.random() * 1001)+1000;
