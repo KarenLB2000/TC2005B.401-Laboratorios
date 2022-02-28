@@ -1,11 +1,11 @@
 // Función 1. Promedio. (node .\laboratorio_8.js)
-function ejer_1(array) {
-    let summatory = 0;
-    for (let element of arr) {
-        summatory += element;
+function ejer_1(arreglo) {
+    let sumatoria = 0;
+    for (let elemento of arreglo) {
+        sumatoria += elemento;
     }
 
-    let avg = summatory / array.length;
+    let avg = sumatoria / arreglo.length;
     return avg;
 }
 
@@ -25,10 +25,39 @@ texto += 'the life of a human being."\n― Osamu Dazai, No Longer Human';
 const filesystem = require('fs');
 filesystem.writeFileSync('laboratorio.txt', texto);
 
-// Función 3. 
-// En construcción. Problema de elección.
+// Función 3. Determinación del sexo.
+/*La función determina_sexo(cadena) que recibe una cadena de texto y despliega el sexo de un ser 
+humano. En este caso, para poder evaluar una secuencia de cromosomas, se utiliza una cadena de 
+texto cuyo contenido son X's y Y's. El sexo femenino está definido por X > Y; el sexo masculino 
+por X < Y; y en caso de X = Y, el sexo aún no está definido.*/
 
-// Función 4. Petición al servidor. http://localhost:3000/
+function determina_sexo(cadena) {
+    let x = 0; let y = 0;
+    for (let i = 0; i < cadena.length; i++){
+        if (cadena[i].toLowerCase() == "x") {
+            x += 1;
+        }
+
+        if (cadena[i].toLowerCase() == "y") {
+            y += 1;
+        }
+    }
+
+    if (x > y){
+        return "Sexo: Femenino.";
+    } else
+    if (x < y){
+        return "Sexo: Masculino.";
+    } else {
+        return "Sexo: Indefinido.";
+    }
+}
+
+let p = ["XXXXYYXY", "XYYXYYXY", "XXYYXYXY"];
+console.log("Cadena: " + p[2]);
+console.log(determina_sexo(p[2]));
+
+// Función 4. Petición al servidor. (http://localhost:3000/)
 const http = require('http');
 const fs = require('fs').promises;
 
