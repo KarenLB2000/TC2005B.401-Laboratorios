@@ -1,24 +1,22 @@
-// Laboratorio 8 - Ana Karen López Balatzar (A01707750)
-
-// Función 1. Promedios.
-/*const arreglo = [];
-let suma = 0;
-
-for (let i = 0; i < 10; i++) {
-    arreglo[i] = Math.floor(Math.random()*10)
-}*/
-
-// Pedir desde consola el arreglo.
-let tamanio = prompt('Tamaño del arreglo: ')
-function promedios(arreglo) {
-    for (let elemento of arreglo) {
-    suma += elemento;
+// Función 1. Promedio.
+function ejer_1(array) {
+    let summatory = 0;
+    for (let element of arr) {
+        summatory += element;
     }
 
-    let promedio = suma / arreglo.length;
-    console.log('Arreglo: ' + '[' + arreglo.toString() + ']')
-    console.log('Promedio: ' + promedio);
+    let avg = summatory / array.length;
+    return avg;
 }
+
+let arr = [];
+for (let i = 0; i < 10; i++) {
+    arr[i] = Math.floor(Math.random()*10)
+}
+
+let resultado = ejer_1(arr);
+console.log('Arreglo: ' + '[' + arr.toString() + ']')
+console.log('Promedio: ' + resultado);
 
 // Función 2. 
 //En construcción. Función que reciba un string y escriba el string en un archivo de texto. Apóyate del módulo fs.
