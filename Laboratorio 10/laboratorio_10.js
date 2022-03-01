@@ -25,6 +25,7 @@ const server = http.createServer( (request, response) => {
         }
         response.write('</ul>');
         response.write('<a href="juegos">Actualizar lista de juegos.</a>');
+        response.write('<br><a href="imagenes">Visitar galería de imágenes.</a>');
         response.write('</body>');
         response.end();
     } else if (request.url === '/juegos' && request.method === 'GET') {
@@ -76,9 +77,29 @@ const server = http.createServer( (request, response) => {
             }
             response.write('</ul>');
             response.write('<a href="juegos">Actualizar lista de juegos.</a>');
+            response.write('<br><a href="imagenes">Visitar galería de imágenes.</a>');
             response.write('</body>');
             response.end();
         });
+    } else if (request.url === '/imagenes' && request.method === 'GET') {
+        response.setHeader('Content-Type', 'text/html');
+        response.write('<!DOCTYPE html>');
+        response.write('<html lang="es-mx"><head>');
+        response.write('<meta charset="UTF-8">');
+        response.write('<title>Laboratorio 10</title>');
+        response.write('</head><body>');
+        response.write('<h1>Galería de Fire Emblem</h1>');
+        response.write('<p><img src="https://fs-prod-cdn.nintendo-europe.com/media/images/10_share_images/games_15/nintendo_switch_4/H2x1_NSwitch_FireEmblemThreeHouses_image1600w.jpg"');
+        response.write(' alt="FE Three Houses" height="300">&emsp;');
+        response.write('<img src="https://fs-prod-cdn.nintendo-europe.com/media/images/10_share_images/games_15/nintendo_switch_4/2x1_NSwitch_FireEmblemWarriorsThreeHopes_image1600w.jpg"');
+        response.write(' alt="FE Three Hopes" height="300"></p>');
+        response.write('<p><img src="https://cdn.wallpapersafari.com/86/27/nW9CVt.png"');
+        response.write(' alt="FE Fates" height="300">&emsp;');
+        response.write('<img src="https://fs-prod-cdn.nintendo-europe.com/media/images/10_share_images/games_15/nintendo_3ds_25/SI_3DS_FireEmblemAwakening_image1600w.jpg"');
+        response.write(' alt="FE Awakening" height="300"></p>');
+        response.write('<a href="/">Regresar a Inicio.</a>');
+        response.write('</body>');
+        response.end();
     } else {
         response.statusCode = 404;
         response.setHeader('Content-Type', 'text/html');
