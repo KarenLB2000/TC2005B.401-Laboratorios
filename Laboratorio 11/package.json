@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/karen-baltazar/TC2005B.401-Laboratorios/issues"
   },
-  "homepage": "https://github.com/karen-baltazar/TC2005B.401-Laboratorios#readme"
+  "homepage": "https://github.com/karen-baltazar/TC2005B.401-Laboratorios#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
 }
