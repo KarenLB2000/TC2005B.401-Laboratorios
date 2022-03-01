@@ -1,0 +1,25 @@
+{
+  "name": "tc2005b.401-laboratorios",
+  "version": "1.0.0",
+  "description": "Laboratorios TC2005B",
+  "main": "(app.js)",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/karen-baltazar/TC2005B.401-Laboratorios.git"
+  },
+  "keywords": [
+    "node"
+  ],
+  "author": "Ana Karen López Baltazar",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/karen-baltazar/TC2005B.401-Laboratorios/issues"
+  },
+  "homepage": "https://github.com/karen-baltazar/TC2005B.401-Laboratorios#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
