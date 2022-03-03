@@ -44,6 +44,17 @@ router.use('/videos', (request, response, next) => {
     response.send(respuesta);
 });
 
+router.use('/json', (request, response, next) => {
+    console.log('Ruta /fe/json');
+    let respuesta = '<!DOCTYPE html><html lang="es-mx"><head><meta charset="UTF-8"><title>Laboratorio 11</title></head><body><h1>Archivo package.json.</h1>';
+    respuesta += '<p>El archivo package.json es un archivo de definición o manifiesto para nuestro proyecto, en el cual especificamos referencias al proyecto como: autor, repositorio, versión y sobre todo las dependencias, entre otras cosas (Anexsoft, 2022).';
+    respuesta += ' Dicho archivo resulta útil para manejar y definir las características del proyecto así como para optimizar la forma en que se generan las dependencias del proyecto y los contenidos de la carpeta node_modules/ (Manz.dev, s.f.).</p>';
+    respuesta += '<h3>Referencias</h3><ul style="list-style-type:square"><li>Anexsoft. (2022). ¿QUÉ ES EL PACKAGE.JSON Y CÓMO FUNCIONA? Recuperado de: <a href="https://anexsoft.com/que-es-el-packagejson-y-como-funciona">https://anexsoft.com/que-es-el-packagejson-y-como-funciona</a></li>';
+    respuesta += '<li>Manz.dev. (s.f.). El archivo package.json. Recuperado de: <a href="https://lenguajejs.com/npm/administracion/package-json/#el-archivo-package-lockjson">https://lenguajejs.com/npm/administracion/package-json/#el-archivo-package-lockjson</a></li></ul>';
+    respuesta += '<a href="/fe">Regresar a Inicio.</a></body>';
+    response.send(respuesta);
+});
+
 router.use('/', (request, response, next) => {
     console.log('Ruta /fe');  
     let respuesta = '<!DOCTYPE html><html lang="es-mx"><head><meta charset="UTF-8"><title>Laboratorio 11</title></head><body><h1>Fire Emblem</h1><p>Fire Emblem es una franquicia de videojuegos del género rol ';
@@ -53,7 +64,7 @@ router.use('/', (request, response, next) => {
     for (let i in games) {
         respuesta += '<li>' + games[i] + '</li>';
     }
-    respuesta += '</ul><a href="/fe/juegos">Actualizar lista de juegos.</a><br><a href="/fe/imagenes">Visitar galería de imágenes.</a><br><a href="/fe/videos">Vídeos de la saga.</a></body>';
+    respuesta += '</ul><a href="/fe/juegos">Actualizar lista de juegos.</a><br><a href="/fe/imagenes">Visitar galería de imágenes.</a><br><a href="/fe/videos">Vídeos de la saga.</a><br><a href="/fe/json">Ver package.json.</a></body>';
     response.send(respuesta);
 });
 
