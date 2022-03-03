@@ -6,7 +6,7 @@ const bodyParser = require('body-parser');
 
 app.use(bodyParser.urlencoded({extended: false}));
 
-const rutas_fe = require('./routes/fe.routes');
+const rutas_fe = require('./routes/fe.routes.js');
 
 app.use('/fe', rutas_fe);
 
