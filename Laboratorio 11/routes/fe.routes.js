@@ -5,12 +5,24 @@ const router = express.Router();
 
 const games  = ["FE: Shadow Dragon and the Blade of Light", "FE Gaiden", "FE: Mystery of the Emblem"];
 
-router.get('/juegos', (request, response, next) => {
+var fs = require('fs');
 
+router.get('/juegos', (request, response, next) => {
+    console.log('GET /fe/juegos');
+    let respuesta = '<!DOCTYPE html><html lang="es-mx"><head><meta charset="UTF-8"><title>Laboratorio 11</title></head><body><h1>Juegos de Fire Emblem</h1><p>Para completar la lista de juegos, introduce algún título no listado anteriormente:</p>';
+    respuesta += '<form action="juegos" method="POST"><label for="nombre">Título: </label> <input type="text" id="nombre" name="nombre" placeholder="FE Heroes"><input type="submit" value="Actualizar"></form><br><a href="/fe">Regresar a Inicio.</a></body>';
+    response.send(respuesta);
 });
 
 router.post('/juegos', (request, response, next) => {
-
+    console.log('POST /fe/juegos');
+    console.log(request.body);
+    games.push(request.body.nombre);
+    let titulo = request.body.nombre + '\r\n';
+    fs.writeFile('laboratorio.txt', titulo, { flag: 'a+' }, (err) => {
+        console.log('Juego guardado en laboratorio.txt');
+    });
+    response.redirect('/fe');
 });
 
 router.use('/imagenes', (request, response, next) => {
@@ -19,7 +31,7 @@ router.use('/imagenes', (request, response, next) => {
     respuesta += '<p><img src="https://fs-prod-cdn.nintendo-europe.com/media/images/10_share_images/games_15/nintendo_switch_4/H2x1_NSwitch_FireEmblemThreeHouses_image1600w.jpg" alt="FE Three Houses" height="300">&emsp;';
     respuesta += '<img src="https://fs-prod-cdn.nintendo-europe.com/media/images/10_share_images/games_15/nintendo_switch_4/2x1_NSwitch_FireEmblemWarriorsThreeHopes_image1600w.jpg" alt="FE Three Hopes" height="300"></p>';
     respuesta += '<p><img src="https://cdn.wallpapersafari.com/86/27/nW9CVt.png" alt="FE Fates" height="300">&emsp; <img src="https://fs-prod-cdn.nintendo-europe.com/media/images/10_share_images/games_15/nintendo_3ds_25/SI_3DS_FireEmblemAwakening_image1600w.jpg"';
-    respuesta += 'alt="FE Awakening" height="300"></p><a href="/">Regresar a Inicio.</a></body>';
+    respuesta += 'alt="FE Awakening" height="300"></p><a href="/fe">Regresar a Inicio.</a></body>';
     response.send(respuesta);
 });
 
