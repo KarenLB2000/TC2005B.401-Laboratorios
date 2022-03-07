@@ -7,8 +7,12 @@ const bodyParser = require('body-parser');
 
 app.use(bodyParser.urlencoded({extended: false}));
 
-// Para incluirlos archivos estáticos dentro de los HTML.
+// Inclusión de archivos estáticos (public).
 app.use(express.static(path.join(__dirname, 'public')));
+
+// Configuración EJS.
+app.set('view engine', 'ejs');
+app.set('views', 'views');
 
 const rutas_fe = require('./routes/fe.routes.js');
 
