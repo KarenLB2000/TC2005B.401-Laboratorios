@@ -7,11 +7,9 @@ const games  = ["FE: Shadow Dragon and the Blade of Light", "FE Gaiden", "FE: My
 
 var fs = require('fs');
 
+// Para devolver un archivo HTML (path).
 router.get('/juegos', (request, response, next) => {
-    //console.log('GET /fe/juegos');
-    let respuesta = '<!DOCTYPE html><html lang="es-mx"><head><meta charset="UTF-8"><title>Laboratorio 11</title></head><body><h1>Juegos de Fire Emblem</h1><p>Para completar la lista de juegos, introduce algún título no listado anteriormente:</p>';
-    respuesta += '<form action="juegos" method="POST"><label for="nombre">Título: </label> <input type="text" id="nombre" name="nombre" placeholder="FE Heroes"><input type="submit" value="Actualizar"></form><br><a href="/fe">Regresar a Inicio.</a></body>';
-    response.send(respuesta);
+    response.sendFile(path.join(__dirname, '..', 'views', 'juegos.html'));
 });
 
 router.post('/juegos', (request, response, next) => {
