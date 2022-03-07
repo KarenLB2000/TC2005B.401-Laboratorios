@@ -9,9 +9,6 @@ const games  = [
     {titulo: "FE: Mystery of the Emblem"}
 ];
 
-
-var fs = require('fs');
-
 // Devolución de un archivo HTML (path).
 router.get('/juegos', (request, response, next) => {
     response.render('juegos.ejs');
@@ -31,13 +28,12 @@ router.use('/videos', (request, response, next) => {
 });
 
 router.use('/json', (request, response, next) => {
-    response.render('json.ejs');
+    response.render('preguntas.ejs');
 });
 
 router.use('/avogado6', (request, response, next) => {
-    response.sendFile(path.join(__dirname, '..', 'views', 'avogado6.html'));
+    response.sendFile(path.join(__dirname, '..', 'public', 'avogado6.html'));
 });
-
 
 router.use('/', (request, response, next) => {
     response.render('index.ejs', {games: games});
