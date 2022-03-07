@@ -44,6 +44,13 @@ ul {
   text-indent: 2em;
 }
 
+.left-picture {
+  float: left;
+  margin: 0 1.5em 1.5em 0;
+  object-fit: contain;
+  align-self: flex-start;
+}
+
 footer a {
   text-decoration:none; 
   color:white;

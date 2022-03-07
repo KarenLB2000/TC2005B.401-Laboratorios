@@ -1,4 +1,4 @@
-// Laboratorio 11. Express.
+// Laboratorio 11 - 12.
 const express = require('express');
 const app = express();
 path = require('path');
