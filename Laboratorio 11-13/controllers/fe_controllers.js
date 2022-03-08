@@ -1,18 +1,14 @@
 // Laboratorio 13.
 const path = require('path');
-
-const games  = [
-    {titulo: "FE: Shadow Dragon and the Blade of Light"},
-    {titulo: "FE Gaiden"},
-    {titulo: "FE: Mystery of the Emblem"}
-];
+const Game = require('../models/game');
 
 exports.get_juegos = (request, response, next) => {
     response.render('juegos.ejs');
 };
 
 exports.post_juegos = (request, response, next) => {
-    games.push({titulo: request.body.nombre});
+    const game = new Game(request.body.nombre);
+    game.save();
     response.redirect('/fe');
 };
 
@@ -33,5 +29,5 @@ exports.avogado6 = (request, response, next) => {
 };
 
 exports.inicio = (request, response, next) => {
-    response.render('index.ejs', {games: games});
+    response.render('index.ejs', {games: Game.fetchAll()});
 };

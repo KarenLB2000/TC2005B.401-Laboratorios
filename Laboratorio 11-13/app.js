@@ -19,6 +19,7 @@ app.use('/fe', rutas_fe);
 
 app.listen(3000);
 
+// Error 404.
 /*app.get('*', (request, response, next) => {
     console.log('Error de acceso a la ruta');
     response.status(404);  
