@@ -1,42 +1,16 @@
-// Laboratorio 11 - 12.
+// Laboratorio 11 - 13.
 const express = require('express');
-
 const router = express.Router();
 
-const games  = [
-    {titulo: "FE: Shadow Dragon and the Blade of Light"},
-    {titulo: "FE Gaiden"},
-    {titulo: "FE: Mystery of the Emblem"}
-];
+// Referencia a controlador.
+const FEController = require('../controllers/fe_controllers'); 
 
-// Devolución de un archivo HTML (path).
-router.get('/juegos', (request, response, next) => {
-    response.render('juegos.ejs');
-});
-
-router.post('/juegos', (request, response, next) => {
-    games.push({titulo: request.body.nombre});
-    response.redirect('/fe');
-});
-
-router.use('/imagenes', (request, response, next) => {
-    response.render('imagenes.ejs');
-});
-
-router.use('/videos', (request, response, next) => {
-    response.render('videos.ejs');
-});
-
-router.use('/json', (request, response, next) => {
-    response.render('preguntas.ejs');
-});
-
-router.use('/avogado6', (request, response, next) => {
-    response.sendFile(path.join(__dirname, '..', 'public', 'avogado6.html'));
-});
-
-router.use('/', (request, response, next) => {
-    response.render('index.ejs', {games: games});
-});
+router.get('/juegos', FEController.get_juegos);
+router.post('/juegos', FEController.post_juegos);
+router.use('/imagenes', FEController.imagenes);
+router.use('/videos', FEController.videos);
+router.use('/preguntas', FEController.preguntas);
+router.use('/avogado6', FEController.avogado6);
+router.use('/', FEController.inicio);
 
 module.exports = router;
