@@ -3,7 +3,7 @@ const numero1 = prompt("Ingresa un número. ");
 
 function ejer_1(n) {
     let tabla = "<table>";
-    tabla +="<tr><th>Número</th>" + "<td>Cuadrado</td>" + "<td>Cubo</td></tr>";
+    tabla +="<tr><th>Número</th>" + "<th>Cuadrado</th>" + "<th>Cubo</th></tr>";
     
     for (let i = 1; i <= n; i++) {
         tabla += "<tr>";
