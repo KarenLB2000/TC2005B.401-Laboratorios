@@ -9,7 +9,7 @@ exports.get_juegos = (request, response, next) => {
 exports.post_juegos = (request, response, next) => {
     const game = new Game(request.body.nombre);
     game.save();
-    response.setHeader('Set-Cookie', 'ultimo_juego='+game.titulo);
+    response.setHeader('Set-Cookie', 'ultimo_juego='+ game.titulo + '; HttpOnly');
     response.redirect('/fe');
 };
 
@@ -30,6 +30,6 @@ exports.avogado6 = (request, response, next) => {
 };
 
 exports.inicio = (request, response, next) => {
-    console.log(request.get('Cookie').split('=')[1]);
+    console.log(request.cookies);
     response.render('index.ejs', {games: Game.fetchAll()});
 };

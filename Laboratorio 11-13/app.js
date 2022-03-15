@@ -1,6 +1,7 @@
 // Laboratorio 11 - 13.
 const express = require('express');
 const bodyParser = require('body-parser');
+const cookieParser = require('cookie-parser');
 const rutas_fe = require('./routes/fe.routes.js');
 path = require('path');
 
@@ -14,6 +15,7 @@ app.set('views', 'views');
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(bodyParser.urlencoded({extended: false}));
+app.use(cookieParser());
 
 app.use('/fe', rutas_fe);
 
