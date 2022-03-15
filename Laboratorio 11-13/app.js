@@ -2,6 +2,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
+const session = require('express-session');
 const rutas_fe = require('./routes/fe.routes.js');
 path = require('path');
 
@@ -14,8 +15,14 @@ app.set('views', 'views');
 // Inclusión de archivos estáticos (public).
 app.use(express.static(path.join(__dirname, 'public')));
 
+// Paquetes Node.js.
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(cookieParser());
+app.use(session({
+    secret: 'ealckeoialsdfoiahswgrjbvroilancoelawiulgneqwlsvkijihkjabceuabsdeakvlrisjc', 
+    resave: false, //La sesión no se guardará en cada petición, sino sólo se guardará si algo cambió 
+    saveUninitialized: false, //Asegura que no se guarde una sesión para una petición que no lo necesita
+}));
 
 app.use('/fe', rutas_fe);
 
