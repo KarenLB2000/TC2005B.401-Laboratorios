@@ -4,6 +4,7 @@ const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
 const session = require('express-session');
 const rutas_fe = require('./routes/fe.routes.js');
+const rutas_usuario = require('./routes/usuario.routes.js');
 path = require('path');
 
 const app = express();
@@ -25,6 +26,7 @@ app.use(session({
 }));
 
 app.use('/fe', rutas_fe);
+app.use('/usuario', rutas_usuario);
 
 app.listen(3000);
 
