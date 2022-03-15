@@ -1,0 +1,21 @@
+<%- include('includes/head.ejs') %>
+
+    <div class="divider"></div><br>
+    <h4>Crea una cuenta</h4>
+    <form action="username" method="POST"><label for="username"></label> <input type="text" id="username"
+        name="username" placeholder="Username"></form><br>
+    
+    <form action="email" method="POST"><label for="email"></label> <input type="text" id="email"
+        name="email" placeholder="Email"></form><br>
+    
+    <form action="phone" method="POST"><label for="phone"></label> <input type="text" id="phone"
+        name="phone" placeholder="Phone"></form><br>
+
+    <form action="password" method="POST"><label for="password"></label> <input type="text" id="password"
+        name="password" placeholder="Password"><br><br>
+        
+    <input type="submit" value="SIGN UP"></form><br>
+ 
+    <div class="divider"></div>
+
+    <%- include('includes/foot.ejs') %>

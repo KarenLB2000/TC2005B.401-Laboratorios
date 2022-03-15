@@ -14,3 +14,13 @@ h4 {
   font-style: italic;
   color: #1a237e;
 }
+
+input[type=button], input[type=submit], input[type=reset] {
+  background-color: #1a237e;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+}

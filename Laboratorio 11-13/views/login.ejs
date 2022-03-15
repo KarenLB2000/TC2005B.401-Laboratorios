@@ -1,0 +1,16 @@
+<%- include('includes/head.ejs') %>
+
+<div class="divider"></div><br>
+<h4>Inicio de sesión</h4>
+<form action="username" method="POST"><label for="username"></label> <input type="text" id="username"
+    name="username" placeholder="Username"></form><br>
+
+<form action="password" method="POST"><label for="password"></label> <input type="text" id="password"
+    name="password" placeholder="Password"><br><br>
+
+<input type="submit" value="SIGN IN"></form><br>
+
+<div class="divider"></div>
+<p>¿Aún no tienes cuenta? <a href="/usuario/signup">Sign Up<a></p>
+
+    <%- include('includes/foot.ejs') %>
