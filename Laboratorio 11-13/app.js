@@ -1,11 +1,11 @@
-// Laboratorio 11 - 13.
+// Laboratorio 11 - 17.
 const express = require('express');
 const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
 const session = require('express-session');
-const rutas_fe = require('./routes/fe.routes.js');
+const rutas_sevenseas = require('./routes/sevenseas.routes.js');
 const rutas_usuario = require('./routes/usuario.routes.js');
-path = require('path');
+//path = require('path');
 
 const app = express();
 
@@ -25,7 +25,7 @@ app.use(session({
     saveUninitialized: false, //Asegura que no se guarde una sesión para una petición que no lo necesita
 }));
 
-app.use('/fe', rutas_fe);
+app.use('/sevenseas', rutas_sevenseas);
 app.use('/usuario', rutas_usuario);
 
 app.listen(3000);
