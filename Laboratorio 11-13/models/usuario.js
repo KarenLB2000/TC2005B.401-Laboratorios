@@ -1,4 +1,4 @@
-// Laboratorio 14.
+// Laboratorio 17.
 const db = require('../util/database');
 
 module.exports = class User {
