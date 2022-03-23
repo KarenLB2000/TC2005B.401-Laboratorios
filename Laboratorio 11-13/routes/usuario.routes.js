@@ -3,10 +3,12 @@ const express = require('express');
 const router = express.Router();
 
 // Referencia a controlador.
-const UserController = require('../controllers/usuario_controllers'); 
+const userController = require('../controllers/usuario_controllers'); 
 
-router.get('/signup', UserController.get_signup);
-router.post('/signup', UserController.post_signup);
-router.use('/login', UserController.login);
-
+//router.get('/signup', userController.get_signup);
+//router.post('/signup', userController.post_signup);
+router.get('/login', userController.get_login);
+router.post('/login', userController.login);
+// router.get('/logout', userController.logout);
+//router.get('/', isAuth, userController.root);
 module.exports = router;

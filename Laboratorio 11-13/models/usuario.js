@@ -19,5 +19,4 @@ module.exports = class User {
     static login(username, password) {
         return true;        
     }
-
 }

@@ -1,4 +1,4 @@
-// Laboratorio 13.
+// Laboratorio 14.
 const path = require('path');
 
 exports.get_signup = (request, response, next) => {
@@ -6,10 +6,14 @@ exports.get_signup = (request, response, next) => {
 };
 
 exports.post_signup= (request, response, next) => {
-    response.render('singup.ejs');
-    response.redirect('/fe');
+    response.render('signup.ejs');
+    response.redirect('/login');
+};
+
+exports.get_login = (request, response, next) => {
+    response.render('login.ejs'); 
 };
 
 exports.login = (request, response, next) => {
-    response.render('login.ejs');
+    response.redirect('/fe'); 
 };
