@@ -1,19 +1,21 @@
 // Laboratorio 14.
-const usuarios = [];
+const db = require('./util/database');
 
 module.exports = class User {
 
     // Constructor de la clase y propiedades del modelo.
-    constructor(n_username, n_email, n_phone, n_password) {
-        this.username = n_username;
+    constructor(n_nombre, n_email, n_username, n_password) {
+        this.nombre = n_nombre;
         this.email = n_email;
-        this.phone = n_phone;
+        this.username = n_username;
         this.password = n_password;
     }
 
-    //Método para guardar de manera persistente el nuevo objeto. 
+    //Método para guardar nuevo usuario en base de datos. 
     save() {
-        usuarios.push(this);      
+        return db.execute(
+            'INSERT INTO usuario(nombre, email, username, password) VALUES(?,?,?,?)',
+            [this.nombre, this.email, this.username, this.password]);    
     }
 
     static login(username, password) {
