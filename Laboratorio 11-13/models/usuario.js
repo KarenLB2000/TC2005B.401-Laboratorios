@@ -1,5 +1,5 @@
 // Laboratorio 14.
-const db = require('./util/database');
+const db = require('../util/database');
 
 module.exports = class User {
 

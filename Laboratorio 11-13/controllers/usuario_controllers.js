@@ -1,5 +1,6 @@
 // Laboratorio 14.
-const path = require('path');
+const User = require('../models/usuario.js');
+
 
 exports.get_login = (request, response, next) => {
     response.render('login.ejs'); 
