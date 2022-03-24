@@ -4,18 +4,34 @@ const Novel = require('../models/novela');
 const Comic = require('../models/comic');
 
 exports.manga = (request, response, next) => {
-    response.render('manga.ejs');
+    Manga.fetchAll()
+        .then(([rows, fieldData]) => {
+            response.render('manga.ejs', {
+                mangas: rows
+            }); 
+        })
+        .catch(err => {
+            console.log(err);
+        }); 
 };
 
 exports.novela = (request, response, next) => {
-    response.render('novela.ejs');
+    Novela.fetchAll()
+        .then(([rows, fieldData]) => {
+            response.render('novela.ejs', {
+                novelas: rows
+            }); 
+        })
+        .catch(err => {
+            console.log(err);
+        }); 
 };
 
 exports.comic = (request, response, next) => {
-    Manga.fetchAll()
+    Comic.fetchAll()
         .then(([rows, fieldData]) => {
             response.render('comic.ejs', {
-                mangas: rows
+                comics: rows
             }); 
         })
         .catch(err => {

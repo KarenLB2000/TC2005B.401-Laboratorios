@@ -5,7 +5,7 @@ const cookieParser = require('cookie-parser');
 const session = require('express-session');
 const rutas_sevenseas = require('./routes/sevenseas.routes.js');
 const rutas_usuario = require('./routes/usuario.routes.js');
-//path = require('path');
+path = require('path');
 
 const app = express();
 

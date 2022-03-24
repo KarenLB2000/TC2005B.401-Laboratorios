@@ -1,6 +1,6 @@
 <%- include('includes/head.ejs') %>
 
-        <h1>Series: Manga</h1>
+        <h4>Series: Manga</h4>
         <p>Actualmente esta es la lista de mangas que ofrecemos y publicamos bajo licencia:</p>
 
         <% if (mangas.length > 0) { %>
@@ -20,9 +20,9 @@
                         </div>
                 <% } %>
         <% } else { %>
-                <h1>Actualmente, no manejamos una oferta de mangas.</h1>
+                <p><i><strong>Actualmente, no manejamos una oferta de mangas.</strong></i></p>
         <% } %>  
-
+        <br>
         <a href="/series">Agregar una nueva serie.</a>
             
 <%- include('includes/foot.ejs') %>
