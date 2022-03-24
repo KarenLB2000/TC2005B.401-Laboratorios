@@ -44,10 +44,10 @@ exports.get_series = (request, response, next) => {
 };
 
 exports.post_series = (request, response, next) => {
-    const manga = new Manga(request.body.nombre);
+    const manga = new Manga(request.body.titulo, request.body.descripcion, request.body.autor, request.body.artista, request.body.imagen);
     manga.save()
         .then(()=> {
-            response.redirect('/manga'); 
+            response.redirect('/sevenseas/manga'); 
         }).catch((error)=>{
             console.log(error);
         });

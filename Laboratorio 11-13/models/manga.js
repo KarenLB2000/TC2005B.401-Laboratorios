@@ -13,7 +13,7 @@ module.exports = class Manga {
 
     // Método para guardar nueva serie(manga) en base de datos.  
     save() {
-        return db.execute('INSERT INTO manga (titulo, descripcion, autor, artista, imagen) VALUES (?, ?, ?, ?, ?)', 
+        return db.execute('INSERT INTO manga(titulo, descripcion, autor, artista, imagen) VALUES (?,?,?,?,?)', 
             [this.titulo, this.descripcion, this.autor, this.artista, this.imagen]);
     }
 

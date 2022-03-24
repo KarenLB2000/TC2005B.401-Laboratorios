@@ -3,8 +3,10 @@
         <h4>Series: Manga</h4>
         <p>Actualmente esta es la lista de mangas que ofrecemos y publicamos bajo licencia:</p>
 
+        <div class="row">
         <% if (mangas.length > 0) { %>
                 <% for (let manga of mangas) { %>
+                <div class="col l6 m4 s12">
                         <div class="card">
                                 <div class="card-image waves-effect waves-block waves-light">
                                   <img class="activator" src="<%= manga.imagen %>">
@@ -18,11 +20,12 @@
                                   <p><%= manga.descripcion %></p>
                                 </div>
                         </div>
+                </div>
                 <% } %>
         <% } else { %>
                 <p><i><strong>Actualmente, no manejamos una oferta de mangas.</strong></i></p>
         <% } %>  
-        <br>
-        <a href="/series">Agregar una nueva serie.</a>
+        </div>
+        <a href="/sevenseas/series">Agregar una nueva serie.</a><br><br>
             
 <%- include('includes/foot.ejs') %>
