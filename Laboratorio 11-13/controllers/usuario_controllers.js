@@ -1,5 +1,5 @@
-// Laboratorio 14.
-const User = require('../models/usuario.js');
+// Laboratorio 17.
+const User = require('../models/usuario');
 
 
 exports.get_login = (request, response, next) => {
@@ -7,7 +7,7 @@ exports.get_login = (request, response, next) => {
 };
 
 exports.login = (request, response, next) => {
-    response.redirect('/fe'); 
+    response.redirect('/sevenseas'); 
 };
 
 exports.get_signup = (request, response, next) => {

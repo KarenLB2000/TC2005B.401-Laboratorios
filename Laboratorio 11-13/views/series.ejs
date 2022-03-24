@@ -1,0 +1,14 @@
+<%- include('includes/head.ejs') %>
+
+        <h1>Agregar nueva serie (Manga)</h1>
+        <p>Para agregar un nuevo manga al catálogo, lleno los siguientes espacios con información del mismo:</p>
+
+        <form action="juegos" method="POST">
+            <label for="nombre">Título: </label> 
+            <input type="text" id="nombre" name="nombre" placeholder="FE Heroes">
+            
+            <input type="submit" value="Agregar">
+        </form><br>
+        <a href="/manga">Cancelar.</a>
+            
+<%- include('includes/foot.ejs') %>

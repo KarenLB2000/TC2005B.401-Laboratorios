@@ -5,13 +5,12 @@ const router = express.Router();
 // Referencia a controlador.
 const SSController = require('../controllers/sevenseas_controllers'); 
 
-router.get('/manga', SSController.get_manga);
-router.post('/manga', SSController.post_manga);
-router.get('/novela', SSController.get_novela);
-router.post('/novela', SSController.post_novela);
-router.get('/comic', SSController.get_comic);
-router.post('/comic', SSController.post_comic);
+router.use('/manga', SSController.manga);
+router.use('/novela', SSController.novela);
+router.use('/comic', SSController.comic);
+router.get('/series', SSController.get_series);
+router.post('/series', SSController.post_series);
 router.use('/preguntas', SSController.preguntas);
-router.use('/', SSController.inicio);
+router.use('/', SSController.home);
 
 module.exports = router;
