@@ -12,7 +12,15 @@ exports.novela = (request, response, next) => {
 };
 
 exports.comic = (request, response, next) => {
-    response.render('comic.ejs');
+    Manga.fetchAll()
+        .then(([rows, fieldData]) => {
+            response.render('comic.ejs', {
+                mangas: rows
+            }); 
+        })
+        .catch(err => {
+            console.log(err);
+        }); 
 };
 
 exports.get_series = (request, response, next) => {
@@ -22,11 +30,11 @@ exports.get_series = (request, response, next) => {
 exports.post_series = (request, response, next) => {
     const manga = new Manga(request.body.nombre);
     manga.save()
-    .then(()=> {
-        response.redirect('/manga'); 
-    }).catch((error)=>{
-        console.log(error);
-    });
+        .then(()=> {
+            response.redirect('/manga'); 
+        }).catch((error)=>{
+            console.log(error);
+        });
 };
 
 exports.preguntas = (request, response, next) => {
