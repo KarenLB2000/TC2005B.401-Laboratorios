@@ -4,9 +4,22 @@
         <p>Para agregar un nuevo manga al catálogo, lleno los siguientes espacios con información del mismo:</p>
 
         <form action="juegos" method="POST">
-            <label for="nombre">Título: </label> 
-            <input type="text" id="nombre" name="nombre" placeholder="FE Heroes">
+            <label for="titulo">Título: </label> 
+            <input type="text" id="titulo" name="titulo" placeholder="One Piece">
             
+            <textarea id="textarea1" class="materialize-textarea"></textarea>
+            <label for="textarea1">Descripción: </label> 
+            <input type="text" id="descripcion" name="descripcion" placeholder="Hace veintidós años, el legendario pirata, Gold D. Roger fue ejecutado...">
+            
+            <label for="autor">Autor: </label>
+            <input type="text" id="autor" name="autor" placeholder="Eiichirō Oda">
+
+            <label for="artista">Artista: </label>
+            <input type="text" id="artista" name="artista" placeholder="Eiichirō Oda">
+
+            <label for="Imagen">Imagen: </label>
+            <input type="text" id="imagen" name="imagen" placeholder="https://tierragamer.com/wp-content/uploads/2021/11/one-piece-1000-anime-trailer-3-450x300.jpg">
+
             <input type="submit" value="Agregar">
         </form><br>
         <a href="/manga">Cancelar.</a>
