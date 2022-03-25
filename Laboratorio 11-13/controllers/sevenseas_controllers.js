@@ -16,7 +16,7 @@ exports.manga = (request, response, next) => {
 };
 
 exports.novela = (request, response, next) => {
-    Novela.fetchAll()
+    Novel.fetchAll()
         .then(([rows, fieldData]) => {
             response.render('novela.ejs', {
                 novelas: rows
@@ -26,6 +26,19 @@ exports.novela = (request, response, next) => {
             console.log(err);
         }); 
 };
+
+exports.novela_filtrada = (request, response, next) => {
+    // console.log(request.params.id_novela);
+    Novel.fetchOne(request.params.id_novela)
+        .then(([rows, fieldData]) => {
+            response.render('novela.ejs', {
+                novelas: rows,
+            }); 
+        })
+        .catch(err => {
+            console.log(err);
+        });
+}; 
 
 exports.comic = (request, response, next) => {
     Comic.fetchAll()
