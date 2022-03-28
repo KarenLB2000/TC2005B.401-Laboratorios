@@ -3,7 +3,7 @@
         <h4>Agregar nueva serie (Manga)</h4>
         <p>Para agregar un nuevo manga al catálogo, lleno los siguientes espacios con información del mismo:</p>
 
-        <form action="/sevenseas/series" method="POST">
+        <form action="/sevenseas/series" method="POST" enctype="multipart/form-data">
             <label for="titulo">Título: </label> 
             <input type="text" id="titulo" name="titulo" placeholder="One Piece"><br>
             
@@ -14,10 +14,10 @@
             <input type="text" id="autor" name="autor" placeholder="Eiichirō Oda"><br>
             
             <label for="artista">Artista: </label>
-            <input type="text" id="artista" name="artista" placeholder="Eiichirō Oda"><br>
+            <input type="text" id="artista" name="artista" placeholder="Eiichirō Oda"><br><br>
 
             <label for="imagen">Imagen: </label>
-            <input type="text" id="imagen" name="imagen" placeholder="https://tierragamer.com/wp-content/uploads/2021/11/one-piece-1000-anime-trailer-3-450x300.jpg"><br><br>
+            <input type="file" id="imagen" name="imagen"><br><br>
 
             <input type="submit" value="Agregar">
         </form><br>
