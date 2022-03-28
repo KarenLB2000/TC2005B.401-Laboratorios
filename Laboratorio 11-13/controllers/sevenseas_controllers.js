@@ -41,10 +41,22 @@ exports.novela_filtrada = (request, response, next) => {
 }; 
 
 exports.comic = (request, response, next) => {
-    Comic.fetchAll()
+    Comic.fetchOne()
         .then(([rows, fieldData]) => {
             response.render('comic.ejs', {
-                comics: rows
+                comic: rows
+            }); 
+        })
+        .catch(err => {
+            console.log(err);
+        }); 
+};
+
+exports.gmod_comic = (request, response, next) => {
+    Comic.fetchOne()
+        .then(([rows, fieldData]) => {
+            response.render('comic.ejs', {
+                comic: rows
             }); 
         })
         .catch(err => {
@@ -57,7 +69,10 @@ exports.get_series = (request, response, next) => {
 };
 
 exports.post_series = (request, response, next) => {
-    const manga = new Manga(request.body.titulo, request.body.descripcion, request.body.autor, request.body.artista, request.body.imagen);
+    const manga = new Manga(
+        request.body.titulo, request.body.descripcion, 
+        request.body.autor, request.body.artista, 
+        request.file.filename);
     manga.save()
         .then(()=> {
             response.redirect('/sevenseas/manga'); 

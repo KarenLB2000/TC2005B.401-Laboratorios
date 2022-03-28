@@ -1,6 +1,19 @@
 <%- include('includes/head.ejs') %>
 
-        <h1>Series: Cómic</h1>
-        <p>Actualmente esta es la lista de los comics que ofrecemos y publicamos bajo licencia:</p>
+        <h4>Series: Cómic</h4>
+        <p>Actualmente sólo ofrecemos y publicamos bajo licencia el siguiente cómic:</p>
+                <img src="<%= comic[0].imagen %>" width="922" height="320"><br>
+
+                <p>
+                        <strong>Título:</strong> <%= comic[0].titulo %> &emsp;
+                        <strong>Autor:</strong> <%= comic[0].autor %> &emsp;
+                        <strong>Artista:</strong> <%= comic[0].artsita %> &emsp;
+                        <strong>Género:</strong> <%= comic[0].genero %>
+                </p>
+                
+                <p><%= comic[0].descripcion %></p>
+        
+        <div class="divider"></div><br>
+        <a href="/sevenseas/series_mod">Modificar registro.</a><br><br>
             
 <%- include('includes/foot.ejs') %>
