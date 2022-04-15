@@ -4,9 +4,7 @@ const bcrypt = require('bcryptjs');
 
 
 exports.get_login = (request, response, next) => {
-    response.render('login.ejs', {
-        login : request.session.isLoggedIn ? request.session.isLoggedIn : ''
-    }); 
+    response.render('login.ejs'); 
 };
 
 exports.login = (request, response, next) => {
@@ -40,9 +38,7 @@ exports.login = (request, response, next) => {
 };
 
 exports.get_signup = (request, response, next) => {
-    response.render('signup.ejs', {
-        login : request.session.isLoggedIn ? request.session.isLoggedIn : ''
-    });
+    response.render('signup.ejs');
 };
 
 exports.post_signup= (request, response, next) => {
