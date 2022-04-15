@@ -1,4 +1,4 @@
-// Laboratorio 17. 
+// Laboratorio 18. 
 const Manga = require('../models/manga');
 const Novel = require('../models/novela');
 const Comic = require('../models/comic');

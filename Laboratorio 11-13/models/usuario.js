@@ -1,5 +1,6 @@
-// Laboratorio 17.
+// Laboratorio 18.
 const db = require('../util/database');
+const bcrypt = require('bcryptjs');
 
 module.exports = class User {
 
@@ -13,9 +14,14 @@ module.exports = class User {
 
     //Método para guardar nuevo usuario en base de datos. 
     save() {
-        return db.execute(
-            'INSERT INTO usuario(nombre, email, username, password) VALUES(?,?,?,?)',
-            [this.nombre, this.email, this.username, this.password]);    
+        return bcrypt.hash(this.password, 12)
+            .then((password_cifrado)=>{
+                return db.execute(
+                    'INSERT INTO usuario(nombre, email, username, password) VALUES(?,?,?,?)',
+                    [this.nombre, this.email, this.username, password_cifrado]);
+            }).catch((error)=>{
+                console.log(error);
+            }); 
     }
 
     static login(username, password) {
