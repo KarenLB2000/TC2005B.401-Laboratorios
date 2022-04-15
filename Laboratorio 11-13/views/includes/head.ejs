@@ -17,13 +17,16 @@
 
 <body>
     <nav class="indigo darken-4">
+        
         <div class="nav-wrapper container">
           <a href="/sevenseas" class="brand-logo">Laboratorios TC2005B</a>
           <ul class="right hide-on-med-and-down">
+            <% if (login == true) { %>
             <li><a href="/sevenseas/manga">Manga</a></li>
             <li><a href="/sevenseas/novela">Novelas</a></li>
             <li><a href="/sevenseas/comic">Comics</a></li>
             <li><a href="/sevenseas/preguntas">Preguntas</a></li>
+            <% } %>
           </ul>
         </div>
     </nav>

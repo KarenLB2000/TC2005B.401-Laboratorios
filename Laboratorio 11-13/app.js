@@ -1,8 +1,10 @@
-// Laboratorio 11 - 17.
+// Laboratorio 11 - 18.
 const express = require('express');
 const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
 const session = require('express-session');
+const csrf = require('csurf');
+const csrfProtection = csrf();
 const multer = require('multer');
 const rutas_sevenseas = require('./routes/sevenseas.routes.js');
 const rutas_usuario = require('./routes/usuario.routes.js');
@@ -44,8 +46,20 @@ app.use(session({
     saveUninitialized: false, //Asegura que no se guarde una sesión para una petición que no lo necesita
 }));
 
+app.use(csrfProtection); 
+
+app.use((request, response, next) => {
+    response.locals.csrfToken = request.csrfToken();
+    next();
+});
+
 app.use('/sevenseas', rutas_sevenseas);
 app.use('/usuario', rutas_usuario);
+
+app.use((request, response, next) => {
+    response.redirect('/usuario/login');
+    next();
+});
 
 app.listen(3000);
 
@@ -53,6 +67,6 @@ app.listen(3000);
 /*app.get('*', (request, response, next) => {
     console.log('Error de acceso a la ruta');
     response.status(404);  
-    let respuesta = '<!DOCTYPE html><html><head><meta charset="UTF-8"><title>Laboraotio 12</title></head><body><h1>FE | Sitio no encontrado.</h1><p>Lo siento, el elemento que buscas no existe. Para acceder a la magia de Fire Emblem, intenta tu suerte con la ruta: /fe</p></body>';
+    let respuesta = '<!DOCTYPE html><html><head><meta charset="UTF-8"><title>Laboratorios TC2005B</title></head><body><h1>FE | Sitio no encontrado.</h1><p>Lo siento, el elemento que buscas no existe. Para acceder a la magia de Fire Emblem, intenta tu suerte con la ruta: /fe</p></body>';
     response.send(respuesta);
 });*/

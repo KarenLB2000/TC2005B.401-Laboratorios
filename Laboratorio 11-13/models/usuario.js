@@ -24,6 +24,11 @@ module.exports = class User {
             }); 
     }
 
+    // Método para buscar un usuario dado su username.
+    static findOne(username) {
+        return db.execute('SELECT * FROM usuario WHERE username= ?', [username]);
+    }
+
     static login(username, password) {
         return true;        
     }

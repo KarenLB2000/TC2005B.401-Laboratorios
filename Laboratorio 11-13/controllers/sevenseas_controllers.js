@@ -7,7 +7,8 @@ exports.manga = (request, response, next) => {
     Manga.fetchAll()
         .then(([rows, fieldData]) => {
             response.render('manga.ejs', {
-                mangas: rows
+                mangas: rows,
+                login : request.session.isLoggedIn ? request.session.isLoggedIn : ''
             }); 
         })
         .catch(err => {
@@ -19,7 +20,8 @@ exports.novela = (request, response, next) => {
     Novel.fetchAll()
         .then(([rows, fieldData]) => {
             response.render('novela.ejs', {
-                novelas: rows
+                novelas: rows,
+                login : request.session.isLoggedIn ? request.session.isLoggedIn : ''
             }); 
         })
         .catch(err => {
@@ -32,6 +34,7 @@ exports.novela_filtrada = (request, response, next) => {
         .then(([rows, fieldData]) => {
             response.render('novela.ejs', {
                 novelas: rows,
+                login : request.session.isLoggedIn ? request.session.isLoggedIn : ''
             }); 
         })
         .catch(err => {
@@ -43,7 +46,8 @@ exports.comic = (request, response, next) => {
     Comic.fetchOne()
         .then(([rows, fieldData]) => {
             response.render('comic.ejs', {
-                comic: rows
+                comic: rows,
+                login : request.session.isLoggedIn ? request.session.isLoggedIn : ''
             }); 
         })
         .catch(err => {
@@ -55,7 +59,8 @@ exports.gmod_comic = (request, response, next) => {
     Comic.fetchOne()
         .then(([rows, fieldData]) => {
             response.render('edicion.ejs', {
-                comic: rows
+                comic: rows,
+                login : request.session.isLoggedIn ? request.session.isLoggedIn : ''
             }); 
         })
         .catch(err => {
@@ -94,9 +99,13 @@ exports.post_series = (request, response, next) => {
 };
 
 exports.preguntas = (request, response, next) => {
-    response.render('preguntas.ejs');
+    response.render('preguntas.ejs', {
+        login : request.session.isLoggedIn ? request.session.isLoggedIn : ''
+    });
 };
 
 exports.home = (request, response, next) => {
-    response.render('home.ejs');
+    response.render('home.ejs', {
+        login : request.session.isLoggedIn ? request.session.isLoggedIn : ''
+    });
 };
