@@ -12,6 +12,13 @@ module.exports = class Comic {
         this.genero = nuevo_genero;
     }
 
+    // Método para actualizar los objetos (cómics) en base de datos.
+    update(seriesID) {
+        return db.execute(
+            'UPDATE comic SET titulo = ?, descripcion = ?, autor = ?, artista = ?, imagen = ?, genero = ? WHERE id_comic = ?',
+                [this.titulo, this.descripcion, this.autor, this.artista, this.imagen, this.genero, seriesID]);
+    }
+
     // Método para devolver los objetos (mangas) en base de datos.
     static fetchOne() {
         return db.execute(

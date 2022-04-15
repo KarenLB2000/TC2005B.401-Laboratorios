@@ -1,0 +1,44 @@
+<%- include('includes/head.ejs') %>
+
+        <h4>Series: Cómic</h4>
+        <p>Realizamos ahora una edición a este cómic de prueba:</p>
+
+        <form action="/sevenseas/series_mod" method="POST">
+
+            <input id="comicId" name="comicId" type="hidden" value="<%= comic[0].id_comic %>">
+
+            <div class="row">
+                <div class="col l6 m6 s12">
+                    <label for="titulo">Título: </label> 
+                    <input type="text" id="titulo" name="titulo" value=" <%= comic[0].titulo %>">
+                </div>
+
+                <div class="col l6 m6 s12">
+                    <label for="artista">Género: </label>
+                    <input type="text" id="genero" name="genero" value="<%= comic[0].genero %>"><br><br>
+                </div>
+
+                <div class="col l6 m6 s12">
+                    <label for="autor">Autor: </label>
+                    <input type="text" id="autor" name="autor" value="<%= comic[0].autor %>">
+                </div>
+
+                <div class="col l6 m6 s12">
+                    <label for="artista">Artista: </label>
+                    <input type="text" id="artista" name="artista" value="<%= comic[0].artista %>">
+                </div>
+            </div>
+                
+                <label for="descripcion">Descripción: </label>
+                <input type="text" id="descripcion" name="descripcion" value="<%= comic[0].descripcion %>"><br><br>
+                            
+                <label for="imagen">Imagen: </label>
+                <input type="text" id="imagen" name="imagen" value="<%= comic[0].imagen %>"><br><br>
+
+                <input type="submit" value="Actualizar">
+        </form><br>
+
+        <div class="divider"></div><br>
+        <a href="/sevenseas/comic">Cancelar.</a><br><br>
+            
+<%- include('includes/foot.ejs') %>

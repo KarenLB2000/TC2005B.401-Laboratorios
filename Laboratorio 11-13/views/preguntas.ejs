@@ -35,6 +35,24 @@
     </ul>
 
     <div class="divider"></div>
+    <h4>SQL.</h4>
+    <p>
+        La capa del modelo se encarga de acceder, almacenar y recuperar toda la información de sincronización del sistema. 
+        Es en esta capa donde se implementa las conexiones al servidor y la base de datos propiamente dicha, se invoca a los 
+        procedimientos almacenados los cuales reciben solicitudes de almacenamiento o recuperación de información.
+
+        Ahora bien, respecto a las ventajas que tiene escribir el código SQL únicamente en la capa del modelo, una de ellas es que ésta faculta 
+        a la clara división de tareas entre capas, <i>facilitando</i> al desarrollador saber, por ejemplo, en qué parte del proyecto 
+        se está dando la interacción con la base de datos.
+    </p>
+
+    <p>
+        Por otro lado, de acuerdo con Campos (2017), SQL injection (Inyección SQL) es "una vulnerabilidad que permite al atacante enviar instrucciones SQL 
+        de forma maliciosa y malintencionada dentro del código SQL programado para la manipulación de bases de datos". Un método para prevenir este ataque es
+        el de las declaraciones preparadas (con consultas parametrizadas) o bien, el uso de procedimientos (<i>stored procedures</i>).
+    </p>
+
+    <div class="divider"></div>
     <h4>Referencias</h4>
     <p>
         Anexsoft. (2022). ¿Qué es el package.json y cómo funciona? Recuperado de: <a
@@ -43,8 +61,14 @@
         Bibliotecas UDLAP. (s.f.). Arquitectura de Software. Recuperado de: <a
             href="http://catarina.udlap.mx/u_dl_a/tales/documentos/lis/rivera_l_a/capitulo2.pdf">http://catarina.udlap.mx/u_dl_a/tales/documentos/lis/rivera_l_a/capitulo2.pdf</a><br><br>
 
+        Campos, P. (2017). ¿Qué es SQL Injection? Recuperado de: <a
+            href="https://openwebinars.net/blog/que-es-sql-injection/">https://openwebinars.net/blog/que-es-sql-injection/</a><br><br>
+
         Manz.dev. (s.f.). El archivo package.json. Recuperado de: <a
             href="https://lenguajejs.com/npm/administracion/package-json/#el-archivo-package-lockjson">https://lenguajejs.com/npm/administracion/package-json/#el-archivo-package-lockjson</a><br><br>
+
+        Moquillaza, S. (2010). Programación en N capas. Recuperado de: <a
+            href="https://sisbib.unmsm.edu.pe/BIBvIRTUAL/Publicaciones/risi/2010_n2/v7n2/a07v7n2.pdf">https://sisbib.unmsm.edu.pe/BIBvIRTUAL/Publicaciones/risi/2010_n2/v7n2/a07v7n2.pdf</a><br><br>
     
         OpenBase. (2022). 10 Best Node.js HTML Templating Engine Libraries. Recuperado de: <a
             href="https://openbase.com/categories/js/best-nodejs-html-templating-engine-libraries">https://openbase.com/categories/js/best-nodejs-html-templating-engine-libraries</a>

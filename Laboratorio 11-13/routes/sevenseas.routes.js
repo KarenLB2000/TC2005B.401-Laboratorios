@@ -7,8 +7,8 @@ const SSController = require('../controllers/sevenseas_controllers');
 
 router.use('/preguntas', SSController.preguntas);
 router.use('/comic', SSController.comic);
-//router.get('/mod_comic', SSController.gmod_comic);
-//router.post('/mod_comic', SSController.pmod_comic);
+router.get('/series_mod', SSController.gmod_comic);
+router.post('/series_mod', SSController.pmod_comic);
 router.use('/manga', SSController.manga);
 router.get('/series', SSController.get_series);
 router.post('/series', SSController.post_series);

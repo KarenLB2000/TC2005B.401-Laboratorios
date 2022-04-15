@@ -28,7 +28,6 @@ exports.novela = (request, response, next) => {
 };
 
 exports.novela_filtrada = (request, response, next) => {
-    // console.log(request.params.id_novela);
     Novel.fetchOne(request.params.id_novela)
         .then(([rows, fieldData]) => {
             response.render('novela.ejs', {
@@ -55,13 +54,26 @@ exports.comic = (request, response, next) => {
 exports.gmod_comic = (request, response, next) => {
     Comic.fetchOne()
         .then(([rows, fieldData]) => {
-            response.render('comic.ejs', {
+            response.render('edicion.ejs', {
                 comic: rows
             }); 
         })
         .catch(err => {
             console.log(err);
         }); 
+};
+
+exports.pmod_comic = (request, response, next) => {
+    const comic = new Comic(
+        request.body.titulo, request.body.descripcion, 
+        request.body.autor, request.body.artista, 
+        request.body.imagen, request.body.genero);
+    comic.update(request.body.comicId)
+        .then(()=> {
+            response.redirect('/sevenseas/comic'); 
+        }).catch((error)=>{
+            console.log(error);
+        });
 };
 
 exports.get_series = (request, response, next) => {
