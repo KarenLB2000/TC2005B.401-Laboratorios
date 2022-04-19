@@ -14,6 +14,7 @@ router.use('/manga', isAuth, SSController.manga);
 router.get('/series', isAuth, SSController.get_series);
 router.post('/series', isAuth, SSController.post_series);
 router.use('/novela', isAuth, SSController.novela);
+router.get('/breakingbad', isAuth, SSController.breakingbad);
 router.get('/:id_novela', isAuth, SSController.novela_filtrada);
 router.use('/', isAuth, SSController.home);
 

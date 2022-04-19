@@ -97,6 +97,11 @@ exports.preguntas = (request, response, next) => {
     response.render('preguntas.ejs');
 };
 
+exports.breakingbad = (request, response, next) => {
+    response.render('quotes.ejs');
+};
+
+
 exports.home = (request, response, next) => {
     response.render('home.ejs');
 };
