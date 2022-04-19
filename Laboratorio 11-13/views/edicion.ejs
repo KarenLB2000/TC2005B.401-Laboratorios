@@ -4,6 +4,7 @@
         <p>Realizamos ahora una edición a este cómic de prueba:</p>
 
         <form action="/sevenseas/series_mod" method="POST">
+            <input type="hidden" name="_csrf" value="<%= csrfToken %>" >
 
             <input id="comicId" name="comicId" type="hidden" value="<%= comic[0].id_comic %>">
 

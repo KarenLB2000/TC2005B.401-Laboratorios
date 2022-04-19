@@ -3,7 +3,7 @@
         <h4>Series: Novela</h4>
         <p>
                 Actualmente esta es la lista de las novelas que ofrecemos y publicamos bajo licencia u opcinalmente puede
-                cambir la ruta /novela por algún identificador (número) de alguna de nuestras novelas:
+                <strong>cambiar la ruta /novela por algún identificador (número) </strong> de alguna de nuestras novelas:
         </p>
 
         <div class="row">
@@ -15,7 +15,7 @@
                                           <img class="activator" src="<%= novela.imagen %>">
                                         </div>
                                         <div class="card-content">
-                                                <span class="card-title activator grey-text text-darken-4"><%= novela.titulo %><i class="material-icons right">more_vert</i></span>
+                                                <span class="card-title activator grey-text text-darken-4"><%= novela.titulo %> (<%= novela.id_novela %>)<i class="material-icons right">more_vert</i></span>
                                                 <p>
                                                 Autor: <%= novela.autor %><br> 
                                                 Artista: <%= novela.artista %><br>

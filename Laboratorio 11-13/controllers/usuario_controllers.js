@@ -33,7 +33,7 @@ exports.login = (request, response, next) => {
                     response.redirect('/usario/login');
                 });
         }).catch((error)=>{
-            console.log(error)
+            response.redirect('/usario/login');
         });
 };
 

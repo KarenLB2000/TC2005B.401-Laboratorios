@@ -4,6 +4,8 @@
         <p>Para agregar un nuevo manga al catálogo, lleno los siguientes espacios con información del mismo:</p>
 
         <form action="/sevenseas/series" method="POST" enctype="multipart/form-data">
+            <input type="hidden" name="_csrf" value="<%= csrfToken %>" >
+            
             <label for="titulo">Título: </label> 
             <input type="text" id="titulo" name="titulo" placeholder="One Piece"><br>
             
@@ -21,6 +23,8 @@
 
             <input type="submit" value="Agregar">
         </form><br>
+
+        <div class="divider"></div><br>
         <a href="/sevenseas/manga">Cancelar.</a><br><br>
             
 <%- include('includes/foot.ejs') %>
