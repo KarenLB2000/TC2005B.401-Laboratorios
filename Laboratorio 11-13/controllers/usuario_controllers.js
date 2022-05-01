@@ -4,7 +4,11 @@ const bcrypt = require('bcryptjs');
 
 
 exports.get_login = (request, response, next) => {
-    response.render('login.ejs'); 
+    if (request.session.isLoggedIn == true) {
+        response.redirect('/sevenseas');
+    } else {
+        response.render('login.ejs'); 
+    }  
 };
 
 exports.login = (request, response, next) => {
@@ -48,5 +52,11 @@ exports.post_signup= (request, response, next) => {
         response.redirect('/usuario/login'); 
     }).catch((error)=>{
         console.log(error);
+    });
+};
+
+exports.logout = (request, response, next) => {
+    request.session.destroy(() => {
+        response.redirect('/'); //Este código se ejecuta cuando la sesión se elimina.
     });
 };

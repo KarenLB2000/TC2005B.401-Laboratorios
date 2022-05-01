@@ -7,7 +7,8 @@ exports.manga = (request, response, next) => {
     Manga.fetchAll()
         .then(([rows, fieldData]) => {
             response.render('manga.ejs', {
-                mangas: rows
+                mangas: rows,
+                home: 0
             }); 
         })
         .catch(err => {
@@ -19,7 +20,8 @@ exports.novela = (request, response, next) => {
     Novel.fetchAll()
         .then(([rows, fieldData]) => {
             response.render('novela.ejs', {
-                novelas: rows
+                novelas: rows,
+                home: 0
             }); 
         })
         .catch(err => {
@@ -31,7 +33,8 @@ exports.novela_filtrada = (request, response, next) => {
     Novel.fetchOne(request.params.id_novela)
         .then(([rows, fieldData]) => {
             response.render('novela.ejs', {
-                novelas: rows
+                novelas: rows,
+                home: 0
             }); 
         })
         .catch(err => {
@@ -43,7 +46,8 @@ exports.comic = (request, response, next) => {
     Comic.fetchOne()
         .then(([rows, fieldData]) => {
             response.render('comic.ejs', {
-                comic: rows
+                comic: rows,
+                home: 0
             }); 
         })
         .catch(err => {
@@ -55,7 +59,8 @@ exports.gmod_comic = (request, response, next) => {
     Comic.fetchOne()
         .then(([rows, fieldData]) => {
             response.render('edicion.ejs', {
-                comic: rows
+                comic: rows,
+                home: 0
             }); 
         })
         .catch(err => {
@@ -77,7 +82,9 @@ exports.pmod_comic = (request, response, next) => {
 };
 
 exports.get_series = (request, response, next) => {
-    response.render('series.ejs');
+    response.render('series.ejs', {
+        home: 0
+    });
 };
 
 exports.post_series = (request, response, next) => {
@@ -94,14 +101,20 @@ exports.post_series = (request, response, next) => {
 };
 
 exports.preguntas = (request, response, next) => {
-    response.render('preguntas.ejs');
+    response.render('preguntas.ejs', {
+        home: 0
+    });
 };
 
 exports.breakingbad = (request, response, next) => {
-    response.render('quotes.ejs');
+    response.render('quotes.ejs', {
+        home: 0
+    });
 };
 
 
 exports.home = (request, response, next) => {
-    response.render('home.ejs');
+    response.render('home.ejs', {
+        home: 1
+    });
 };

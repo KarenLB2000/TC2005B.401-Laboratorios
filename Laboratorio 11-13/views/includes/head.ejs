@@ -22,11 +22,15 @@
         <div class="nav-wrapper container">
           <a href="/sevenseas" class="brand-logo">Laboratorios TC2005B</a>
           <ul class="right hide-on-med-and-down">
+            <% if (home == 0) { %>
+            <li><a href="/sevenseas">Home</a></li>
+            <% } %>
             <li><a href="/sevenseas/manga">Manga</a></li>
             <li><a href="/sevenseas/novela">Novelas</a></li>
             <li><a href="/sevenseas/comic">Comics</a></li>
             <li><a href="/sevenseas/breakingbad">API</a></li>
             <li><a href="/sevenseas/preguntas">Preguntas</a></li>
+            <li><a href="/usuario/logout"><i class="material-icons">exit_to_app</i></a></li>
           </ul>
         </div>
     </nav>
