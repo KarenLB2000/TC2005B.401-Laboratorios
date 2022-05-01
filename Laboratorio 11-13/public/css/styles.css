@@ -28,3 +28,52 @@ input[type=button], input[type=submit], input[type=reset] {
 footer p {
   color: white;
 }
+
+.center {
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Special+Elite');
+
+.quote {
+	font-weight: 100;
+	font-size: 2rem;
+	max-width: 600px;
+	line-height: 1.4;
+	position: relative;
+	margin: 0;
+	padding: .5rem;
+
+  text-align: center;
+  font-family: 'Times New Roman', cursive;
+	color: #3f3f5a;
+	justify-content: center;
+}
+
+.quote:before,
+.quote:after {
+	position: absolute;
+	color: #026635;
+	font-size: 6rem;
+	width: 2rem;
+	height: 2rem;
+}
+
+.quote:before {
+	content: '“';
+	left: -3rem;
+	top: -2rem;
+}
+
+.quote:after {
+	content: '”';
+	right: -3rem;
+	bottom: 1rem;
+}
+
+cite {
+	line-height: 3;
+	text-align: left;
+}

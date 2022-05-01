@@ -1,7 +1,26 @@
 <%- include('includes/head.ejs') %>
 
-    <h4>API: Breaking Bad Quotes API</h4>
-
-    <a href="/sevenseas">Regresar a Inicio.</a><br><br>
-
+        <h4>API: Breaking Bad Quotes API</h4><br>
+        <div class="row">
+                <div class="col s4"><img src="https://cdn.culturagenial.com/es/imagenes/breaking-bad-logo-0-cke.jpg" width="250px"></div>
+                <div class="col s8"><div id="quotes"></div></div>
+        </div>
+        <br><a href="/sevenseas">Regresar a Inicio.</a><br>
+        
+        <script>
+                const consultarAPI = async() => {
+                        const api = await fetch("https://breakingbadapi.com/api/quote/random/");
+                        const quote = await api.json();
+                        let q = quote[0];
+                        let respuesta = '<div class="quote">' + q.quote + '</div><br>';
+                        respuesta = respuesta + "<cite>" + q.author + "<cite>";
+                        let divQuote = document.getElementById("quotes");
+                        divQuote.innerHTML = respuesta;
+                }
+                consultarAPI();
+                // Referencias: 
+                //      https://www.youtube.com/watch?v=sHXz0u4a0FQ
+                //      https://codepen.io/JoeHastings/pen/MOdRVm
+        </script>
+            
 <%- include('includes/foot.ejs') %>
