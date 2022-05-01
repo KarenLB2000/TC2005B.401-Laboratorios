@@ -115,6 +115,7 @@ exports.breakingbad = (request, response, next) => {
 
 exports.home = (request, response, next) => {
     response.render('home.ejs', {
+        username: request.session.username,
         home: 1
     });
 };
