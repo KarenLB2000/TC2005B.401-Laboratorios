@@ -26,6 +26,11 @@
                 <p><i><strong>Actualmente, no manejamos una oferta de mangas.</strong></i></p>
         <% } %>  
         </div>
+
+        <% if (ultimo_manga != '') { %>
+                <p>Último manga agregado:  <%= ultimo_manga %> (<%= fecha_manga %>)</p>
+        <% } %>
+
         <a href="/sevenseas/series">Agregar una nueva serie.</a><br><br>
             
 <%- include('includes/foot.ejs') %>

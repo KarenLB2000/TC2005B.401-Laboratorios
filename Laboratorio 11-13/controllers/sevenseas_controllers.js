@@ -7,6 +7,8 @@ exports.manga = (request, response, next) => {
     Manga.fetchAll()
         .then(([rows, fieldData]) => {
             response.render('manga.ejs', {
+                ultimo_manga: request.cookies.ultima_serie ? request.cookies.ultima_serie : '',
+                fecha_manga: request.cookies.ultima_serieF ? request.cookies.ultima_serieF : '',
                 mangas: rows,
                 home: 0
             }); 
@@ -92,6 +94,22 @@ exports.post_series = (request, response, next) => {
         request.body.titulo, request.body.descripcion, 
         request.body.autor, request.body.artista, 
         request.file.filename);
+    
+    let date = new Date();
+    let day = date.getDate();
+    let month = date.getMonth() + 1;
+    let year = date.getFullYear();
+    let d = "";
+        
+    if((month < 10) && (day < 10)){
+        d = "0" + day + "-0" + month + "-" + year;
+    } else {
+        d = day + "-" + month + "-" + year;
+    }
+
+    response.setHeader('Set-Cookie', 'ultima_serie=' + manga.titulo + '; HttpOnly');
+    response.setHeader('Set-Cookie', 'ultima_serieF=' + d + '; HttpOnly');
+
     manga.save()
         .then(()=> {
             response.redirect('/sevenseas/manga'); 
