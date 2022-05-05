@@ -22,6 +22,7 @@ app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
 // Paquetes Node.js.
 app.use(bodyParser.urlencoded({extended: false}));
+app.use(bodyParser.json());
 
 // Configuración multer (manejo de archivos).
 //fileStorage: Es nuestra constante de configuración para manejar el almacenamiento
@@ -61,12 +62,13 @@ app.use((request, response, next) => {
     next();
 });
 
-app.listen(3000);
-
 // Error 404.
-/*app.get('*', (request, response, next) => {
+app.get('*', (request, response, next) => {
     console.log('Error de acceso a la ruta');
     response.status(404);  
     let respuesta = '<!DOCTYPE html><html><head><meta charset="UTF-8"><title>Laboratorios TC2005B</title></head><body><h1>FE | Sitio no encontrado.</h1><p>Lo siento, el elemento que buscas no existe. Para acceder a la magia de Fire Emblem, intenta tu suerte con la ruta: /fe</p></body>';
     response.send(respuesta);
-});*/
+});
+app.listen(3000);
+
+

@@ -23,4 +23,10 @@ module.exports = class Novela {
     static fetchOne(id_novela) {
         return db.execute('SELECT * FROM novela WHERE id_novela=?', [id_novela]);
     }
+
+    // Método para devolver un objeto cuyos atributos hagan match o coincidan con cierto valor.
+    static match(valor) {
+        return db.execute('SELECT * FROM novela WHERE (titulo LIKE ? OR descripcion LIKE ? OR autor LIKE ? OR artista LIKE ?)', 
+            ['%' + valor + '%', '%' + valor + '%', '%' + valor + '%', '%' + valor + '%']);
+    }
 }

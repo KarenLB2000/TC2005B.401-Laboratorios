@@ -42,6 +42,16 @@ exports.novela_filtrada = (request, response, next) => {
         .catch(err => {
             console.log(err);
         });
+};
+
+exports.buscar_novela = (request, response, next) => {
+    Novel.match(request.params.valor)
+        .then(([rows, fieldData]) => {
+            response.status(200).json(rows);
+        })
+        .catch(err => {
+            console.log(err);
+        });
 }; 
 
 exports.comic = (request, response, next) => {
